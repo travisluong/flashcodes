@@ -1,0 +1,10 @@
+[
+  {
+    "name": "JavaScript",
+    "url": "decks/javascript.json"
+  },
+  {
+    "name": "jQuery",
+    "url": "decks/jquery.json"
+  }
+]

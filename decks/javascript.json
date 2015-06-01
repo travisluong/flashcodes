@@ -1,0 +1,10 @@
+[
+  {
+    "front": ".push()",
+    "back": "Adds an element to array."
+  },
+  {
+    "front": ".pop()",
+    "back": "Removes last element from array."
+  }
+]
