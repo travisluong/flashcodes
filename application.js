@@ -1,6 +1,7 @@
 var fc = {
   decksDiv: $('#decks'),
   cardsDiv: $('#cards'),
+  cardsControlsDiv: $('#cards-control'),
   decks: [],
   currentDeck: null
 };
@@ -12,7 +13,10 @@ fc.Card = function(front, back) {
 
 fc.Card.prototype.render = function() {
   var cardFragment = $('<div class="card">');
-  cardFragment.append(this.front + " " + this.back);
+  var front = $('<div class="front">').append(this.front);
+  var back = $('<div class="back">').append(this.back);
+  cardFragment.append(front).append(back);
+
   return cardFragment;      
 }
 

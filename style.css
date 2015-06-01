@@ -1,5 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: #CCC;
-  color: #333;
+  background: #000;
+  color: #FFF;
   font-family: Helvetica;
+}
+
+#decks {
+  background: #333;
+  color: #FFF;
+  height: 100vh;
+  width: 20%;
+  float: left;
+}
+
+#cards {
+  background: #000;
+  color: #FFF;
+  width: 80%;
+  float: left;
+}
+
+.deck {
+  background: #FFFAD5;
+  color: #105B63;
+  width: 67%;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.deck button {
+  margin-top: 10px;
+  background: #BD4932;
+  color: #FFF;
+  outline: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.deck button:hover {
+  background: #DB9E36;
+}
+
+.card {
+  background: #FFFAD5;
+  color: #105B63;
+  width: 50%;
+  margin: 25vh;
+  height: 50vh;
+  position: absolute;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.card .back {
+  display: none;
 }
