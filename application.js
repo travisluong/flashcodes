@@ -63,7 +63,7 @@ fc.Deck.render = function(deckArray) {
 fc.Deck.bind = function(decksFragment) {
   decksFragment.on('click', 'button', function(e) {
     var name = $(this).data('name');
-    var deck = decks.find(function(element, index, array) {
+    var deck = fc.decks.find(function(element, index, array) {
       if (element.name === name) {
         return true;
       } else {
@@ -101,7 +101,7 @@ fc.loadDeck = function(deck) {
 
 fc.init = function() {
   fc.Deck.fetch(function(deckArray) {
-    decks = deckArray;
+    fc.decks = deckArray;
     var decksFragment = fc.Deck.render(deckArray);
     fc.Deck.bind(decksFragment);
     fc.decksDiv.append(decksFragment);
