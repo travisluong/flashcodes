@@ -11,6 +11,9 @@ var fc = {
   cardsDiv: $('#cards'),
   cardsControlsDiv: $('#cards-controls'),
   gameInfoDiv: $('#game-info'),
+  userOptionsDiv: $('#user-options'),
+  shuffleButton: $('#shuffle'),
+  backFirstButton: $('#back-first'),
 
   // constants
   LEFT_ARROW_KEY_CODE: 37,
@@ -26,7 +29,10 @@ var fc = {
   correctCount: 0,
   wrongCount: 0,
   gameStarted: false,
-
+  userOptions: {
+    shuffle: false,
+    backFirst: false
+  },
 
   // models: encapsulate data
   // --------------------------------------------------------------------------------
@@ -63,18 +69,13 @@ var fc = {
 
   bindKeyPress: function() {
     $(document).on('keypress', function(e) {
-      if (!fc.gameStarted) {
-        return;
-      }
-      if (e.keyCode === fc.DOWN_ARROW_KEY_CODE) {
-        e.preventDefault();
-        fc.toggleCard();
-      } else if (e.keyCode === fc.RIGHT_ARROW_KEY_CODE ) {
-        fc.correctCallback();
-      } else if (e.keyCode === fc.LEFT_ARROW_KEY_CODE) {
-        fc.wrongCallback();
-      }      
+      fc.handleKeyPress(e);
     });
+  },
+
+  bindUserOptions: function() {
+    fc.shuffleButton.on('click', fc.toggleShuffle);
+    fc.backFirstButton.on('click', fc.toggleBackFirst);
   },
 
   bindInit: function() {
@@ -82,15 +83,23 @@ var fc = {
     fc.bindDeck();
     fc.bindCardsControls();
     fc.bindKeyPress();
+    fc.bindUserOptions();
   },
 
   // views: input data --> render function --> output html
   // --------------------------------------------------------------------------------
-  renderCard: function(card) {
-    var html = '<div class="card">' + 
-      '<div class="front">' + card.front + '</div>' +
-      '<div class="back">' + card.back + '</div>' +
-      '</div>';
+  renderCard: function(card, backFirst) {
+    if (!backFirst) {
+      var html = '<div class="card">' + 
+        '<div class="front">' + card.front + '</div>' +
+        '<div class="back hidden">' + card.back + '</div>' +
+        '</div>';
+    } else {
+      var html = '<div class="card">' + 
+        '<div class="front hidden">' + card.front + '</div>' +
+        '<div class="back">' + card.back + '</div>' +
+        '</div>';
+    }
     return html;
   },
 
@@ -120,9 +129,9 @@ var fc = {
   },
 
   renderGameInfo: function(cardIndex, cardsLength, correctCount, wrongCount) {
-    var html = '<p>Progress: ' + cardIndex + '/' + cardsLength + '</p>' +
-      '<p>Correct: ' + correctCount + '</p>' +
-      '<p>Wrong: ' + wrongCount + '</p>';
+    var html = '<span class="orange">Progress: ' + cardIndex + '/' + cardsLength + '</span> ' +
+      '<span class="wrong">Wrong: ' + wrongCount + '</span> ' +
+      '<span class="correct">Correct: ' + correctCount + '</span>';
     return html;
   },
 
@@ -152,6 +161,30 @@ var fc = {
 
   // controllers: controller actions --> update models, views, and app state
   // --------------------------------------------------------------------------------
+  handleKeyPress: function(e) {
+    if (!fc.gameStarted) {
+      return;
+    }
+    if (e.keyCode === fc.DOWN_ARROW_KEY_CODE) {
+      e.preventDefault();
+      fc.toggleCard();
+    } else if (e.keyCode === fc.RIGHT_ARROW_KEY_CODE ) {
+      fc.correctCallback();
+    } else if (e.keyCode === fc.LEFT_ARROW_KEY_CODE) {
+      fc.wrongCallback();
+    }      
+  },
+
+  toggleShuffle: function() {
+    fc.userOptions.shuffle = !fc.userOptions.shuffle;
+    fc.shuffleButton.toggleClass('btnOn', fc.userOptions.shuffle);
+  },
+
+  toggleBackFirst: function() {
+    fc.userOptions.backFirst = !fc.userOptions.backFirst;
+    fc.backFirstButton.toggleClass('btnOn', fc.userOptions.backFirst);
+  },
+
   toggleCard: function() {
     fc.cardsDiv.find('.front').slideToggle();
     fc.cardsDiv.find('.back').slideToggle();
@@ -171,8 +204,7 @@ var fc = {
       var cards = data.map(function(obj) {
         return new fc.Card(obj);
       });
-      fc.currentCards = cards;
-      fn();
+      fn(cards);
     });
   },
 
@@ -194,7 +226,11 @@ var fc = {
     });
     fc.cardsDiv.empty();
     fc.currentDeck = deck;
-    fc.fetchCards(deck, function() {
+    fc.fetchCards(deck, function(cards) {
+      if (fc.userOptions.shuffle) {
+        cards = fc.shuffle(cards);
+      }
+      fc.currentCards = cards;
       fc.loadDeckCallback();
     });
   },
@@ -216,7 +252,7 @@ var fc = {
 
   loadCard: function(card) {
     fc.currentCard = card;
-    var cardFragment = fc.renderCard(card);
+    var cardFragment = fc.renderCard(card, fc.userOptions.backFirst);
     fc.cardsDiv.append(cardFragment);
   },
 
@@ -263,6 +299,11 @@ var fc = {
     fc.currentCardIndex = 0;
     fc.correctCount = 0;
     fc.wrongCount = 0;
+  },
+
+  shuffle: function(o){
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
   },
 
   // init: starting point of app

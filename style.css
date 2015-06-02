@@ -33,6 +33,25 @@ a {
   color: #FFF;
 }
 
+button {
+  background: #BD4932;
+  color: #FFF;
+  outline: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.btnOn {
+  background: #105B63 !important;
+}
+
 .correct {
   color: #105B63;
   font-weight: bold;
@@ -52,15 +71,7 @@ a {
 
 .deck button {
   margin-top: 10px;
-  background: #BD4932;
-  color: #FFF;
-  outline: 0;
-  border: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  cursor: pointer;
   padding: 10px;
-  font-size: 16px;
 }
 
 .deck button:hover {
@@ -75,10 +86,6 @@ a {
   height: 30vh;
 }
 
-.card .back {
-  display: none;
-}
-
 .percentage {
   margin-top: 20px;
   font-size: 30px;
@@ -87,6 +94,31 @@ a {
 
 .clearfix {
   overflow: auto;
+}
+
+.orange {
+  color: #DB9E36;
+}
+
+.hidden {
+  display: none;
+}
+
+#user-options {
+  margin-bottom: 20px;
+}
+
+#user-options button {
+  margin-top: 10px;
+  background: #BD4932;
+  color: #FFF;
+  outline: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;  
 }
 
 #cards-controls {
@@ -122,6 +154,10 @@ a {
   margin-top: 20px;
   font-size: 30px;
   line-height: 1.5em;
+}
+
+#game-info span {
+  margin-right: 20px;
 }
 
 #game-area {
