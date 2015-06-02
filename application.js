@@ -1,3 +1,8 @@
+// flashcodes.
+// created by travis luong.
+
+// configuration. top level variables.
+// --------------------------------------------------------------------------------
 var fc = {
   decksDiv: $('#decks'),
   cardsDiv: $('#cards'),
@@ -15,36 +20,12 @@ var fc = {
   gameStarted: false
 };
 
+// models. code for data models. card and deck.
+// --------------------------------------------------------------------------------
 fc.Card = function(front, back) {
   this.front = front;
   this.back = back;
   this.isCorrect = null;
-}
-
-fc.Card.prototype.render = function() {
-  var cardFragment = $('<div class="card">');
-  var front = $('<div class="front">').append(this.front);
-  var back = $('<div class="back">').append(this.back);
-  cardFragment.append(front).append(back);
-
-  return cardFragment;      
-}
-
-fc.Card.clickCallback = function() {
-  $(this).find('.front').slideToggle();
-  $(this).find('.back').slideToggle();
-}
-
-fc.Card.bind = function(cardFragment) {
-  cardFragment.on('click', function() {
-    fc.Card.clickCallback();
-  });
-
-  $(document).off('down_arrow_pressed');
-
-  $(document).on('down_arrow_pressed', function(e) {
-    fc.Card.clickCallback();
-  });
 }
 
 fc.Deck = function(name, url) {
@@ -84,6 +65,72 @@ fc.Deck = function(name, url) {
   }
 }
 
+// events. code that handles events.
+// --------------------------------------------------------------------------------
+fc.Card.bind = function(cardFragment) {
+  cardFragment.on('click', function() {
+    fc.Card.clickCallback();
+  });
+  $(document).off('down_arrow_pressed');
+  $(document).on('down_arrow_pressed', function(e) {
+    fc.Card.clickCallback();
+  });
+}
+
+fc.Deck.bind = function(decksFragment) {
+  decksFragment.on('click', 'button', function(e) {
+    var name = $(this).data('name');
+    var deck = fc.decks.find(function(element, index, array) {
+      if (element.name === name) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    fc.loadDeck(deck);
+  });    
+}
+
+fc.bindCardsControls = function(cardsControlsFragment) {
+  cardsControlsFragment.find('#wrong').on('click', function() {
+    fc.wrongCallback();
+  });
+  cardsControlsFragment.find('#correct').on('click', function() {
+    fc.correctCallback();
+  });
+  $(document).off('keypress');
+  $(document).on('keypress', function(e) {
+    if (fc.gameStarted && e.keyCode === fc.LEFT_ARROW_KEY_CODE) {
+      fc.wrongCallback();
+    }
+  });
+  $(document).on('keypress', function(e) {
+    if (fc.gameStarted && e.keyCode === fc.RIGHT_ARROW_KEY_CODE ) {
+      fc.correctCallback();
+    }
+  });  
+}
+
+fc.bindKeyDown = function() {
+  $(document).on('keypress', function(e) {
+    if (e.keyCode === fc.DOWN_ARROW_KEY_CODE) {
+      e.preventDefault();
+      $(document).trigger("down_arrow_pressed");
+    }
+  });
+}
+
+// rendering. code that generates html.
+// --------------------------------------------------------------------------------
+fc.Card.prototype.render = function() {
+  var cardFragment = $('<div class="card">');
+  var front = $('<div class="front">').append(this.front);
+  var back = $('<div class="back">').append(this.back);
+  cardFragment.append(front).append(back);
+
+  return cardFragment;      
+}
+
 fc.Deck.prototype.render = function() {
   var deckFragment = $('<div class="deck">');
   deckFragment.append("<h2>" + this.name + "</h2>");
@@ -99,18 +146,42 @@ fc.Deck.render = function(deckArray) {
   return decksFragment;
 }
 
-fc.Deck.bind = function(decksFragment) {
-  decksFragment.on('click', 'button', function(e) {
-    var name = $(this).data('name');
-    var deck = fc.decks.find(function(element, index, array) {
-      if (element.name === name) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-    fc.loadDeck(deck);
-  });    
+fc.renderCardsControls = function() {
+  var cardsControlsFragment = $('<div><button id="wrong">wrong</button><button id="correct">correct</button></div>');
+  return cardsControlsFragment;
+}
+
+fc.renderGameInfo = function() {
+  var cardsProgress = "<p>Progress: " + fc.currentCardIndex + "/" + fc.currentDeck.size() + "</p>";
+  cardsProgress += "<p>Correct: " + fc.correctCount + "</p>";
+  cardsProgress += "<p>Wrong: " + fc.wrongCount + "</p>";
+  return cardsProgress;
+}
+
+fc.renderReportCard = function() {
+  var div = $('<div>');
+  var reportCardFragment = $('<table class="report-card">');
+  var reportCardTHead = "<thead><tr><th>Front</th><th>Back</th><th>Correct?</th></tr></thead>";
+  var reportCardTbody = $('<tbody>');
+  var reportCardPercentage = $("<p class='percentage'>Percentage: </p>").append(Math.round(fc.correctCount / fc.currentDeck.size() * 100) + "%");
+
+  fc.currentDeck.getCards().forEach(function(card) {
+    var cardFragment = $('<tr class="report-card-card">');
+    var correctClass = card.isCorrect ? "correct" : "wrong";
+    cardFragment.append("<td>" + card.front + "</td><td>" + card.back + "</td><td class='" + correctClass + "'>" + card.isCorrect + "</td>");
+    reportCardTbody.append(cardFragment);
+  });
+
+  reportCardFragment.append(reportCardTHead).append(reportCardTbody);
+  div.append(reportCardFragment).append(reportCardPercentage);
+  return div;
+}
+
+// actions. code that changes the state of the app. updates models and views.
+// --------------------------------------------------------------------------------
+fc.Card.clickCallback = function() {
+  $(this).find('.front').slideToggle();
+  $(this).find('.back').slideToggle();
 }
 
 fc.Deck.fetch = function(fn) {
@@ -165,11 +236,6 @@ fc.loadCard = function(card) {
   fc.cardsDiv.append(cardFragment);
 }
 
-fc.renderCardsControls = function() {
-  var cardsControlsFragment = $('<div><button id="wrong">wrong</button><button id="correct">correct</button></div>');
-  return cardsControlsFragment;
-}
-
 fc.wrongCallback = function() {
   fc.currentCardIndex += 1;
   fc.currentCard.isCorrect = false;
@@ -186,26 +252,6 @@ fc.correctCallback = function() {
   fc.nextCardLogic();
 }
 
-fc.bindCardsControls = function(cardsControlsFragment) {
-  cardsControlsFragment.find('#wrong').on('click', function() {
-    fc.wrongCallback();
-  });
-  cardsControlsFragment.find('#correct').on('click', function() {
-    fc.correctCallback();
-  });
-  $(document).off('keypress');
-  $(document).on('keypress', function(e) {
-    if (fc.gameStarted && e.keyCode === fc.LEFT_ARROW_KEY_CODE) {
-      fc.wrongCallback();
-    }
-  });
-  $(document).on('keypress', function(e) {
-    if (fc.gameStarted && e.keyCode === fc.RIGHT_ARROW_KEY_CODE ) {
-      fc.correctCallback();
-    }
-  });  
-}
-
 fc.nextCardLogic = function() {
   if (fc.currentCardIndex < fc.currentDeck.size()) {
     fc.showNextCard();
@@ -218,35 +264,9 @@ fc.nextCardLogic = function() {
   }
 }
 
-fc.renderGameInfo = function() {
-  var cardsProgress = "<p>Progress: " + fc.currentCardIndex + "/" + fc.currentDeck.size() + "</p>";
-  cardsProgress += "<p>Correct: " + fc.correctCount + "</p>";
-  cardsProgress += "<p>Wrong: " + fc.wrongCount + "</p>";
-  return cardsProgress;
-}
-
 fc.showNextCard = function() {
   fc.cardsDiv.find('.card').remove();
   fc.loadCard(fc.currentDeck.getCard(fc.currentCardIndex));
-}
-
-fc.renderReportCard = function() {
-  var div = $('<div>');
-  var reportCardFragment = $('<table class="report-card">');
-  var reportCardTHead = "<thead><tr><th>Front</th><th>Back</th><th>Correct?</th></tr></thead>";
-  var reportCardTbody = $('<tbody>');
-  var reportCardPercentage = $("<p class='percentage'>Percentage: </p>").append(Math.round(fc.correctCount / fc.currentDeck.size() * 100) + "%");
-
-  fc.currentDeck.getCards().forEach(function(card) {
-    var cardFragment = $('<tr class="report-card-card">');
-    var correctClass = card.isCorrect ? "correct" : "wrong";
-    cardFragment.append("<td>" + card.front + "</td><td>" + card.back + "</td><td class='" + correctClass + "'>" + card.isCorrect + "</td>");
-    reportCardTbody.append(cardFragment);
-  });
-
-  reportCardFragment.append(reportCardTHead).append(reportCardTbody);
-  div.append(reportCardFragment).append(reportCardPercentage);
-  return div;
 }
 
 fc.resetGameInfo = function() {
@@ -255,15 +275,8 @@ fc.resetGameInfo = function() {
   fc.wrongCount = 0;
 }
 
-fc.bindKeyDown = function() {
-  $(document).on('keypress', function(e) {
-    if (e.keyCode === fc.DOWN_ARROW_KEY_CODE) {
-      e.preventDefault();
-      $(document).trigger("down_arrow_pressed");
-    }
-  });
-}
-
+// init. the entry point for the app.
+// --------------------------------------------------------------------------------
 fc.init = function() {
   fc.Deck.fetch(function(deckArray) {
     fc.decks = deckArray;
