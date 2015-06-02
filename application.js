@@ -79,14 +79,9 @@ fc.Deck.bind = function(decksFragment) {
   });    
 }
 
-fc.bindCardsControls = function(cardsControlsFragment) {
-  cardsControlsFragment.find('#wrong').on('click', function() {
-    fc.wrongCallback();
-  });
-  cardsControlsFragment.find('#correct').on('click', function() {
-    fc.correctCallback();
-  });
-  // $(document).off('keypress');
+fc.bindCardsControls = function() {
+  fc.cardsControlsDiv.on('click', '#wrong', fc.wrongCallback);
+  fc.cardsControlsDiv.on('click', '#correct', fc.correctCallback);
   $(document).on('keypress', function(e) {
     if (fc.gameStarted && e.keyCode === fc.LEFT_ARROW_KEY_CODE) {
       fc.wrongCallback();
@@ -206,7 +201,6 @@ fc.loadDeck = function(deck) {
 fc.updateCardsControls = function() {
   fc.cardsControlsDiv.empty();
   var cardsControlsFragment = fc.renderCardsControls();
-  fc.bindCardsControls(cardsControlsFragment);
   fc.cardsControlsDiv.append(cardsControlsFragment);
 }
 
@@ -273,6 +267,7 @@ fc.init = function() {
     fc.bindKeyDown();
     fc.gameStarted = true;
     fc.Card.bind();
+    fc.bindCardsControls();
   });
 }
 
