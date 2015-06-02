@@ -1,0 +1,226 @@
+[
+  {
+    "front": ".error()",
+    "back": "Bind an event handler to the 'error' JavaScript event."
+  },
+  {
+    "front": ".resize()",
+    "back": "Bind an event handler to the 'resize' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".scroll()",
+    "back": "Bind an event handler to the 'scroll' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".holdReady()",
+    "back": "Holds or releases the execution of jQuery's ready event."
+  },
+  {
+    "front": ".load()",
+    "back": "Bind an event handler to the 'load' JavaScript event."
+  },
+  {
+    "front": ".ready()",
+    "back": "Specify a function to execute when the DOM is fully loaded."
+  },
+  {
+    "front": ".unload()",
+    "back": "Bind an event handler to the 'unload' JavaScript event."
+  },
+  {
+    "front": ".bind()",
+    "back": "Attach a handler to an event for the elements."
+  },
+  {
+    "front": ".delegate()",
+    "back": "Attach a handler to one or more events for all elements that match the selector, now or in the future, based on a specific set of root elements."
+  },
+  {
+    "front": ".die()",
+    "back": "Remove all event handlers previously attached using .live() from the elements."
+  },
+  {
+    "front": ".live()",
+    "back": "Attach a handler to the event for all elements which match the current selector, now and in the future."
+  },
+  {
+    "front": ".off()",
+    "back": "Remove an event handler."
+  },
+  {
+    "front": ".on()",
+    "back": "Attach an event handler function for one or more events to the selected elements."
+  },
+  {
+    "front": ".one()",
+    "back": "Attach a handler to an event for the elements. The handler is executed at most once per element."
+  },
+  {
+    "front": ".trigger()",
+    "back": "Execute all handlers and behaviors attached to the matched elements for the given event type."
+  },
+  {
+    "front": ".triggerHandler()",
+    "back": "Execute all handlers attached to an element for an event."
+  },
+  {
+    "front": ".unbind()",
+    "back": "Remove a previously-attached event handler from the elements."
+  },
+  {
+    "front": ".undelegate()",
+    "back": "Remove a handler from the event for all elements which match the current selector, now or in the future, based upon a specific set of root elements."
+  },
+  {
+    "front": ".blur()",
+    "back": "Bind an event handler to the 'blur' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".change()",
+    "back": "Bind an event handler to the 'change' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".focus()",
+    "back": "Bind an event handler to the 'focus' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".select()",
+    "back": "Bind an event handler to the 'select' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".submit()",
+    "back": "Bind an event handler to the 'submit' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".keydown()",
+    "back": "Bind an event handler to the 'keydown' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".keypress()",
+    "back": "Bind an event handler to the 'keypress' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".keyup()",
+    "back": "Bind an event handler to the 'keyup' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".click()",
+    "back": "Bind an event handler to the 'click' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".dblclick()",
+    "back": "Bind an event handler to the 'dblclick' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".focusin()",
+    "back": "Bind an event handler to the 'focusin' JavaScript event."
+  },
+  {
+    "front": ".focusout()",
+    "back": "Bind an event handler to the 'focusout' JavaScript event."
+  },
+  {
+    "front": ".hover()",
+    "back": "Bind two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements."
+  },
+  {
+    "front": ".mousedown()",
+    "back": "Bind an event handler to the 'mousedown' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".mouseenter()",
+    "back": "Bind an event handler to be fired when the mouse enters an element, or trigger that handler on an element."
+  },
+  {
+    "front": ".mouseleave()",
+    "back": "Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element."
+  },
+  {
+    "front": ".mousemove()",
+    "back": "Bind an event handler to the 'mousemove' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".mouseout()",
+    "back": "Bind an event handler to the 'mouseout' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".mouseover()",
+    "back": "Bind an event handler to the 'mouseover' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".mouseup()",
+    "back": "Bind an event handler to the 'mouseup' JavaScript event, or trigger that event on an element."
+  },
+  {
+    "front": ".toggle()",
+    "back": "Bind two or more handlers to the matched elements, to be executed on alternate clicks."
+  },
+  {
+    "front": "event.currentTarget",
+    "back": "The current DOM element within the event bubbling phase."
+  },
+  {
+    "front": "event.data",
+    "back": "The optional data passed to jQuery.fn.bind when the current executing handler was bound."
+  },
+  {
+    "front": "event.isDefaultPrevented()",
+    "back": "Returns whether event.preventDefault() was ever called on this event object."
+  },
+  {
+    "front": "event.isImmediatePropagationStopped()",
+    "back": "Returns whether event.stopImmediatePropagation() was ever called on this event object."
+  },
+  {
+    "front": "event.isPropagationStopped()",
+    "back": "Returns whether event.stopPropagation() was ever called on this event object."
+  },
+  {
+    "front": "event.namespace",
+    "back": "The namespace specified when the event was triggered."
+  },
+  {
+    "front": "event.pageX",
+    "back": "The mouse position relative to the left edge of the document."
+  },
+  {
+    "front": "event.pageY",
+    "back": "The mouse position relative to the top edge of the document."
+  },
+  {
+    "front": "event.preventDefault()",
+    "back": "If this method is called, the default action of the event will not be triggered."
+  },
+  {
+    "front": "event.relatedTarget",
+    "back": "The other DOM element involved in the event, if any."
+  },
+  {
+    "front": "event.result",
+    "back": "The last value returned by an event handler that was triggered by this event, unless the value was undefined."
+  },
+  {
+    "front": "event.stopImmediatePropagation()",
+    "back": "Prevents other event handlers from being called."
+  },
+  {
+    "front": "event.stopPropagation()",
+    "back": "Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event."
+  },
+  {
+    "front": "event.target",
+    "back": "The DOM element that initiated the event."
+  },
+  {
+    "front": "event.timeStamp",
+    "back": "The difference in milliseconds between the time an event is triggered and January 1, 1970."
+  },
+  {
+    "front": "event.type",
+    "back": "Describes the nature of the event."
+  },
+  {
+    "front": "event.which",
+    "back": "For key or button events, this attribute indicates the specific button or key that was pressed."
+  }
+]

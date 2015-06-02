@@ -198,7 +198,7 @@ fc.renderReportCard = function() {
   var reportCardFragment = $('<table class="report-card">');
   var reportCardTHead = "<thead><tr><th>Front</th><th>Back</th><th>Correct?</th></tr></thead>";
   var reportCardTbody = $('<tbody>');
-  var reportCardPercentage = $("<p class='percentage'>Percentage: </p>").append(fc.correctCount / fc.currentDeck.size() * 100 + "%");
+  var reportCardPercentage = $("<p class='percentage'>Percentage: </p>").append(Math.round(fc.correctCount / fc.currentDeck.size() * 100) + "%");
 
   fc.currentDeck.getCards().forEach(function(card) {
     var cardFragment = $('<tr class="report-card-card">');

@@ -1,0 +1,114 @@
+[
+  {
+    "front": ".eq()",
+    "back": "Reduce the set of matched elements to the one at the specified index."
+  },
+  {
+    "front": ".filter()",
+    "back": "Reduce the set of matched elements to those that match the selector or pass the function's test."
+  },
+  {
+    "front": ".first()",
+    "back": "Reduce the set of matched elements to the first in the set."
+  },
+  {
+    "front": ".has()",
+    "back": "Reduce the set of matched elements to those that have a descendant that matches the selector or DOM element."
+  },
+  {
+    "front": ".is()",
+    "back": "Check the current matched set of elements against a selector and return true if at least one of these elements matches the selector."
+  },
+  {
+    "front": ".last()",
+    "back": "Reduce the set of matched elements to the final one in the set."
+  },
+  {
+    "front": ".map()",
+    "back": "Pass each element in the current matched set through a function, producing a new jQuery object containing the return values."
+  },
+  {
+    "front": ".not()",
+    "back": "Remove elements from the set of matched elements."
+  },
+  {
+    "front": ".slice()",
+    "back": "Reduce the set of matched elements to a subset specified by a range of indices."
+  },
+  {
+    "front": ".add()",
+    "back": "Add elements to the set of matched elements."
+  },
+  {
+    "front": ".andSelf()",
+    "back": "Add the previous set of elements on the stack to the current set."
+  },
+  {
+    "front": ".contents()",
+    "back": "Get the children of each element in the set of matched elements, including text and comment nodes."
+  },
+  {
+    "front": ".each()",
+    "back": "Iterate over a jQuery object, executing a function for each matched element."
+  },
+  {
+    "front": ".end()",
+    "back": "End the most recent filtering operation in the current chain and return the set of matched elements to its previous state."
+  },
+  {
+    "front": ".addBack()",
+    "back": "Add the previous set of elements on the stack to the current set, optionally filtered by a selector."
+  },
+  {
+    "front": ".children()",
+    "back": "Get the children of each element in the set of matched elements, optionally filtered by a selector."
+  },
+  {
+    "front": ".closest()",
+    "back": "Get the first ancestor element that matches the selector, beginning at the current element and progressing up through the DOM tree."
+  },
+  {
+    "front": ".find()",
+    "back": "Get the descendants of each element in the current set of matched elements, filtered by a selector."
+  },
+  {
+    "front": ".next()",
+    "back": "Get the immediately following sibling of each element in the set of matched elements. If a selector is provided, it retrieves the next sibling only if it matches that selector."
+  },
+  {
+    "front": ".nextAll()",
+    "back": "Get all following siblings of each element in the set of matched elements, optionally filtered by a selector."
+  },
+  {
+    "front": ".nextUntil()",
+    "back": "Get all following siblings of each element up to but not including the element matched by the selector."
+  },
+  {
+    "front": ".parent()",
+    "back": "Get the parent of each element in the current set of matched elements, optionally filtered by a selector."
+  },
+  {
+    "front": ".parents()",
+    "back": "Get the ancestors of each element in the current set of matched elements, optionally filtered by a selector."
+  },
+  {
+    "front": ".parentsUntil()",
+    "back": "Get the ancestors of each element in the current set of matched elements, up to but not including the element matched by the selector."
+  },
+  {
+    "front": ".prev()",
+    "back": "Get the immediately preceding sibling of each element in the set of matched elements, optionally filtered by a selector."
+  },
+  {
+    "front": ".prevAll()",
+    "back": "Get all preceding siblings of each element in the set of matched elements, optionally filtered by a selector."
+  },
+  {
+    "front": ".prevUntil()",
+    "back": "Get all preceding siblings of each element up to but not including the element matched by the selector."
+  },
+  {
+    "front": ".siblings()",
+    "back": "Get the siblings of each element in the set of matched elements, optionally filtered by a selector."
+  }
+]

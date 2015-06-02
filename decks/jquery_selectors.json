@@ -1,0 +1,250 @@
+[
+  {
+    "front": "*",
+    "back": "Selects all elements."
+  },
+  {
+    "front": ".class",
+    "back": "Selects all elements with the given class."
+  },
+  {
+    "front": "element",
+    "back": "Selects all elements with the given tag name."
+  },
+  {
+    "front": "#id",
+    "back": "Selects a single element with the given id attribute."
+  },
+  {
+    "front": "selector1, selectorN, ...",
+    "back": "Selects the combined results of all the specified selectors."
+  },
+  {
+    "front": "parent &gt; child",
+    "back": "Selects all direct child elements specified by 'child' of elements specified by 'parent'."
+  },
+  {
+    "front": "ancestor descendant",
+    "back": "Selects all elements that are descendants of a given ancestor."
+  },
+  {
+    "front": "prev + next",
+    "back": "Selects all next elements matching 'next' that are immediately preceded by a sibling 'prev'."
+  },
+  {
+    "front": "prev ~ siblings",
+    "back": "Selects all sibling elements that follow after the 'prev' element, have the same parent, and match the filtering 'siblings' selector."
+  },
+  {
+    "front": "animated",
+    "back": "Select all elements that are in the progress of an animation at the time the selector is run."
+  },
+  {
+    "front": "eq()",
+    "back": "Select the element at index n within the matched set."
+  },
+  {
+    "front": "even",
+    "back": "Selects even elements, zero-indexed. See also odd."
+  },
+  {
+    "front": "first",
+    "back": "Selects the first matched element."
+  },
+  {
+    "front": "gt()",
+    "back": "Select all elements at an index greater than index within the matched set."
+  },
+  {
+    "front": "header",
+    "back": "Selects all elements that are headers, like h1, h2, h3 and so on."
+  },
+  {
+    "front": "lang()",
+    "back": "Selects all elements of the specified language."
+  },
+  {
+    "front": "last",
+    "back": "Selects the last matched element."
+  },
+  {
+    "front": "lt()",
+    "back": "Select all elements at an index less than index within the matched set."
+  },
+  {
+    "front": "not()",
+    "back": "Selects all elements that do not match the given selector."
+  },
+  {
+    "front": "odd",
+    "back": "Selects odd elements, zero-indexed. See also even."
+  },
+  {
+    "front": "root",
+    "back": "Selects the element that is the root of the document."
+  },
+  {
+    "front": "target",
+    "back": "Selects the target element indicated by the fragment identifier of the document's URI."
+  },
+  {
+    "front": "contains()",
+    "back": "Select all elements that contain the specified text."
+  },
+  {
+    "front": "empty",
+    "back": "Select all elements that have no children (including text nodes)."
+  },
+  {
+    "front": "has()",
+    "back": "Selects elements which contain at least one element that matches the specified selector."
+  },
+  {
+    "front": "parent",
+    "back": "Select all elements that are the parent of another element, including text nodes."
+  },
+  {
+    "front": "hidden",
+    "back": "Selects all elements that are hidden."
+  },
+  {
+    "front": "visible",
+    "back": "Selects all elements that are visible."
+  },
+  {
+    "front": "[name|=\"value\"]",
+    "back": "Selects elements that have the specified attribute with a value either equal to a given string or starting with that string followed by a hyphen (-)."
+  },
+  {
+    "front": "[name*=\"value\"]",
+    "back": "Selects elements that have the specified attribute with a value containing the a given substring."
+  },
+  {
+    "front": "[name~=\"value\"]",
+    "back": "Selects elements that have the specified attribute with a value containing a given word, delimited by spaces."
+  },
+  {
+    "front": "[name$=\"value\"]",
+    "back": "Selects elements that have the specified attribute with a value ending exactly with a given string. The comparison is case sensitive."
+  },
+  {
+    "front": "[name=\"value\"]",
+    "back": "Selects elements that have the specified attribute with a value exactly equal to a certain value."
+  },
+  {
+    "front": "[name!=\"value\"]",
+    "back": "Select elements that either don't have the specified attribute, or do have the specified attribute but not with a certain value."
+  },
+  {
+    "front": "[name^=\"value\"]",
+    "back": "Selects elements that have the specified attribute with a value beginning exactly with a given string."
+  },
+  {
+    "front": "[name]",
+    "back": "Selects elements that have the specified attribute, with any value."
+  },
+  {
+    "front": "[name=\"value\"][name2=\"value2\"]",
+    "back": "Matches elements that match all of the specified attribute filters."
+  },
+  {
+    "front": "first-child",
+    "back": "Selects all elements that are the first child of their parent."
+  },
+  {
+    "front": "first-of-type",
+    "back": "Selects all elements that are the first among siblings of the same element name."
+  },
+  {
+    "front": "last-child",
+    "back": "Selects all elements that are the last child of their parent."
+  },
+  {
+    "front": "last-of-type",
+    "back": "Selects all elements that are the last among siblings of the same element name."
+  },
+  {
+    "front": "nth-child()",
+    "back": "Selects all elements that are the nth-child of their parent."
+  },
+  {
+    "front": "nth-last-child()",
+    "back": "Selects all elements that are the nth-child of their parent, counting from the last element to the first."
+  },
+  {
+    "front": "nth-last-of-type()",
+    "back": "Selects all elements that are the nth-child of their parent, counting from the last element to the first."
+  },
+  {
+    "front": "nth-of-type()",
+    "back": "Selects all elements that are the nth child of their parent in relation to siblings with the same element name."
+  },
+  {
+    "front": "only-child",
+    "back": "Selects all elements that are the only child of their parent."
+  },
+  {
+    "front": "only-of-type()",
+    "back": "Selects all elements that have no siblings with the same element name."
+  },
+  {
+    "front": "button",
+    "back": "Selects all button elements and elements of type button."
+  },
+  {
+    "front": "checkbox",
+    "back": "Selects all elements of type checkbox."
+  },
+  {
+    "front": "checked",
+    "back": "Matches all elements that are checked."
+  },
+  {
+    "front": "disabled",
+    "back": "Selects all elements that are disabled."
+  },
+  {
+    "front": "enabled",
+    "back": "Selects all elements that are enabled."
+  },
+  {
+    "front": "focus",
+    "back": "Selects element if it is currently focused."
+  },
+  {
+    "front": "file",
+    "back": "Selects all elements of type file."
+  },
+  {
+    "front": "image",
+    "back": "Selects all elements of type image."
+  },
+  {
+    "front": "input",
+    "back": "Selects all input, textarea, select and button elements."
+  },
+  {
+    "front": "password",
+    "back": "Selects all elements of type password."
+  },
+  {
+    "front": "radio",
+    "back": "Selects all elements of type radio."
+  },
+  {
+    "front": "reset",
+    "back": "Selects all elements of type reset."
+  },
+  {
+    "front": "selected",
+    "back": "Selects all elements that are selected."
+  },
+  {
+    "front": "submit",
+    "back": "Selects all elements of type submit."
+  },
+  {
+    "front": "text",
+    "back": "Selects all elements of type text."
+  }
+]

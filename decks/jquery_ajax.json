@@ -1,0 +1,66 @@
+[
+  {
+    "front": ".ajaxComplete()",
+    "back": "Register a handler to be called when Ajax requests complete. This is an Ajax Event."
+  },
+  {
+    "front": ".ajaxError()",
+    "back": "Register a handler to be called when Ajax requests complete with an error. This is an Ajax Event."
+  },
+  {
+    "front": ".ajaxSend()",
+    "back": "Attach a function to be executed before an Ajax request is sent. This is an Ajax Event."
+  },
+  {
+    "front": ".ajaxStart()",
+    "back": "Register a handler to be called when the first Ajax request begins. This is an Ajax Event."
+  },
+  {
+    "front": ".ajaxStop()",
+    "back": "Register a handler to be called when all Ajax requests have completed. This is an Ajax Event."
+  },
+  {
+    "front": ".ajaxSuccess()",
+    "back": "Attach a function to be executed whenever an Ajax request completes successfully. This is an Ajax Event."
+  },
+  {
+    "front": "jQuery.param()",
+    "back": "Create a serialized representation of an array or object, suitable for use in a URL query string or Ajax request."
+  },
+  {
+    "front": ".serialize()",
+    "back": "Encode a set of form elements as a string for submission."
+  },
+  {
+    "front": ".serializeArray()",
+    "back": "Encode a set of form elements as an array of names and values."
+  },
+  {
+    "front": "jQuery.ajax()",
+    "back": "Perform an asynchronous HTTP (Ajax) request."
+  },
+  {
+    "front": "jQuery.ajaxSetup()",
+    "back": "Set default values for future Ajax requests."
+  },
+  {
+    "front": "jQuery.get()",
+    "back": "Load data from the server using a HTTP GET request."
+  },
+  {
+    "front": "jQuery.getJSON()",
+    "back": "Load JSON-encoded data from the server using a GET HTTP request."
+  },
+  {
+    "front": "jQuery.getScript()",
+    "back": "Load a JavaScript file from the server using a GET HTTP request, then execute it."
+  },
+  {
+    "front": ".load()",
+    "back": "Load data from the server and place the returned HTML into the matched element."
+  },
+  {
+    "front": "jQuery.post()",
+    "back": "Load data from the server using a HTTP POST request."
+  }
+]

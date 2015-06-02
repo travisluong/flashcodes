@@ -95,7 +95,7 @@ a {
 
 #left-col {
   float: left;
-  height: 100vh;
+  height: 100%;
   background: #333;
   color: #FFF;
   width: 20%;
@@ -129,6 +129,7 @@ a {
   background: #FFD34E;
   padding: 20px;
   height: 100%;
+  padding-bottom: 100px;
 }
 
 #cards {

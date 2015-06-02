@@ -1,0 +1,110 @@
+[
+  {
+    "front": ".attr()",
+    "back": "Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element."
+  },
+  {
+    "front": ".prop()",
+    "back": "Get the value of a property for the first element in the set of matched elements or set one or more properties for every matched element."
+  },
+  {
+    "front": ".removeAttr()",
+    "back": "Remove an attribute from each element in the set of matched elements."
+  },
+  {
+    "front": ".removeProp()",
+    "back": "Remove a property for the set of matched elements."
+  },
+  {
+    "front": ".val()",
+    "back": "Get the current value of the first element in the set of matched elements or set the value of every matched element."
+  },
+  {
+    "front": ".addClass()",
+    "back": "Adds the specified class(es) to each of the set of matched elements."
+  },
+  {
+    "front": ".css()",
+    "back": "Get the value of a style property for the first element in the set of matched elements or set one or more CSS properties for every matched element."
+  },
+  {
+    "front": "jQuery.cssHooks",
+    "back": "Provides a way to hook directly into jQuery to override how particular CSS properties are retrieved or set. Amongst other uses, cssHooks can be used to create custom, browser-normalized properties for CSS3 features such as box-shadows and gradients."
+  },
+  {
+    "front": ".hasClass()",
+    "back": "Determine whether any of the matched elements are assigned the given class."
+  },
+  {
+    "front": ".removeClass()",
+    "back": "Remove a single class, multiple classes, or all classes from each element in the set of matched elements."
+  },
+  {
+    "front": ".toggleClass()",
+    "back": "Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the switch argument."
+  },
+  {
+    "front": ".height()",
+    "back": "Get the current computed height for the first element in the set of matched elements or set the height of every matched element."
+  },
+  {
+    "front": ".innerHeight()",
+    "back": "Get the current computed height for the first element in the set of matched elements, including padding but not border."
+  },
+  {
+    "front": ".innerWidth()",
+    "back": "Get the current computed width for the first element in the set of matched elements, including padding but not border."
+  },
+  {
+    "front": ".outerHeight()",
+    "back": "Get the current computed height for the first element in the set of matched elements, including padding, border, and optionally margin."
+  },
+  {
+    "front": ".outerWidth()",
+    "back": "Get the current computed width for the first element in the set of matched elements, including padding and border."
+  },
+  {
+    "front": ".width()",
+    "back": "Get the current computed width for the first element in the set of matched elements or set the width of every matched element."
+  },
+  {
+    "front": ".offset()",
+    "back": "Get the current coordinates of the first element, or set the coordinates of every element, in the set of matched elements, relative to the document."
+  },
+  {
+    "front": ".offsetParent()",
+    "back": "Get the closest ancestor element that is positioned."
+  },
+  {
+    "front": ".position()",
+    "back": "Get the current coordinates of the first element in the set of matched elements, relative to the offset parent."
+  },
+  {
+    "front": ".scrollLeft()",
+    "back": "Get the current horizontal position of the scroll bar for the first element in the set of matched elements or set the horizontal position of the scroll bar for every matched element."
+  },
+  {
+    "front": ".scrollTop()",
+    "back": "Get the current vertical position of the scroll bar for the first element in the set of matched elements or set the vertical position of the scroll bar for every matched element."
+  },
+  {
+    "front": "jQuery.data()",
+    "back": "Store arbitrary data associated with the specified element and/or return the value that was set."
+  },
+  {
+    "front": ".data()",
+    "back": "Store arbitrary data associated with the matched elements or return the value at the named data store for the first element in the set of matched elements."
+  },
+  {
+    "front": "jQuery.hasData()",
+    "back": "Determine whether an element has any jQuery data associated with it."
+  },
+  {
+    "front": "jQuery.removeData()",
+    "back": "Remove a previously-stored piece of data."
+  },
+  {
+    "front": ".removeData()",
+    "back": "Remove a previously-stored piece of data."
+  }
+]

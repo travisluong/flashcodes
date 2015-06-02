@@ -1,10 +1,42 @@
 [
   {
-    "name": "JavaScript",
-    "url": "decks/javascript.json"
+    "name": "Tutorial",
+    "url": "decks/tutorial.json"
   },
   {
     "name": "jQuery",
     "url": "decks/jquery.json"
+  },
+  {
+    "name": "jQuery Selectors",
+    "url": "decks/jquery_selectors.json"
+  },
+  {
+    "name": "jQuery Attributes",
+    "url": "decks/jquery_attributes.json"
+  },
+  {
+    "name": "jQuery Manipulation",
+    "url": "decks/jquery_manipulation.json"
+  },
+  {
+    "name": "jQuery Traversing",
+    "url": "decks/jquery_traversing.json"
+  },
+  {
+    "name": "jQuery Events",
+    "url": "decks/jquery_events.json"
+  },
+  {
+    "name": "jQuery Effects",
+    "url": "decks/jquery_effects.json"
+  },
+  {
+    "name": "jQuery Ajax",
+    "url": "decks/jquery_ajax.json"
+  },
+  {
+    "name": "jQuery Core",
+    "url": "decks/jquery_core.json"
   }
 ]

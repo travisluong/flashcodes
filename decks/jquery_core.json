@@ -1,0 +1,282 @@
+[
+  {
+    "front": "jQuery()",
+    "back": "Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string."
+  },
+  {
+    "front": "jQuery.noConflict()",
+    "back": "Relinquish jQuery's control of the $ variable."
+  },
+  {
+    "front": "jQuery.sub()",
+    "back": "Creates a new copy of jQuery whose properties and methods can be modified without affecting the original jQuery object."
+  },
+  {
+    "front": "jQuery.when()",
+    "back": "Provides a way to execute callback functions based on one or more objects, usually Deferred objects that represent asynchronous events."
+  },
+  {
+    "front": "jQuery.boxModel",
+    "back": "States if the current page, in the user's browser, is being rendered using the W3C CSS Box Model."
+  },
+  {
+    "front": "jQuery.browser",
+    "back": "Contains flags for the useragent, read from navigator.userAgent. We recommend against using this property; please try to use feature detection instead (see jQuery.support). jQuery.browser may be moved to a plugin in a future release of jQuery."
+  },
+  {
+    "front": "jQuery.contains()",
+    "back": "Check to see if a DOM node is within another DOM node."
+  },
+  {
+    "front": "jQuery.each()",
+    "back": "A generic iterator function, which can be used to seamlessly iterate over both objects and arrays. Arrays and array-like objects with a length property (such as a function's arguments object) are iterated by numeric index, from 0 to length-1. Other objects are iterated via their named properties."
+  },
+  {
+    "front": "jQuery.extend()",
+    "back": "Merge the contents of two or more objects together into the first object."
+  },
+  {
+    "front": "jQuery.globalEval()",
+    "back": "Execute some JavaScript code globally."
+  },
+  {
+    "front": "jQuery.grep()",
+    "back": "Finds the elements of an array which satisfy a filter function. The original array is not affected."
+  },
+  {
+    "front": "jQuery.inArray()",
+    "back": "Search for a specified value within an array and return its index (or -1 if not found)."
+  },
+  {
+    "front": "jQuery.isArray()",
+    "back": "Determine whether the argument is an array."
+  },
+  {
+    "front": "jQuery.isEmptyObject()",
+    "back": "Check to see if an object is empty (contains no properties)."
+  },
+  {
+    "front": "jQuery.isFunction()",
+    "back": "Determine if the argument passed is a Javascript function object."
+  },
+  {
+    "front": "jQuery.isNumeric()",
+    "back": "Determines whether its argument is a number."
+  },
+  {
+    "front": "jQuery.isPlainObject()",
+    "back": "Check to see if an object is a plain object (created using '{}' or 'new Object')."
+  },
+  {
+    "front": "jQuery.isWindow()",
+    "back": "Determine whether the argument is a window."
+  },
+  {
+    "front": "jQuery.isXMLDoc()",
+    "back": "Check to see if a DOM node is within an XML document (or is an XML document)."
+  },
+  {
+    "front": "jQuery.makeArray()",
+    "back": "Convert an array-like object into a true JavaScript array."
+  },
+  {
+    "front": "jQuery.map()",
+    "back": "Translate all items in an array or array-like object to another array of items."
+  },
+  {
+    "front": "jQuery.merge()",
+    "back": "Merge the contents of two arrays together into the first array."
+  },
+  {
+    "front": "jQuery.noop()",
+    "back": "An empty function."
+  },
+  {
+    "front": "jQuery.now()",
+    "back": "Return a number representing the current time."
+  },
+  {
+    "front": "jQuery.parseHTML()",
+    "back": "Parses a string into an array of DOM nodes."
+  },
+  {
+    "front": "jQuery.parseJSON()",
+    "back": "Takes a well-formed JSON string and returns the resulting JavaScript object."
+  },
+  {
+    "front": "jQuery.parseXML()",
+    "back": "Parses a string into an XML document."
+  },
+  {
+    "front": "jQuery.proxy()",
+    "back": "Takes a function and returns a new one that will always have a particular context."
+  },
+  {
+    "front": "jQuery.support",
+    "back": "A collection of properties that represent the presence of different browser features or bugs."
+  },
+  {
+    "front": "jQuery.trim()",
+    "back": "Remove the whitespace from the beginning and end of a string."
+  },
+  {
+    "front": "jQuery.type()",
+    "back": "Determine the internal JavaScript [[Class]] of an object."
+  },
+  {
+    "front": "jQuery.unique()",
+    "back": "Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers."
+  },
+  {
+    "front": ".get()",
+    "back": "Retrieve the DOM elements matched by the jQuery object."
+  },
+  {
+    "front": ".index()",
+    "back": "Search for a given element from among the matched elements."
+  },
+  {
+    "front": ".size()",
+    "back": "Return the number of elements in the jQuery object."
+  },
+  {
+    "front": ".toArray()",
+    "back": "Retrieve all the DOM elements contained in the jQuery set, as an array."
+  },
+  {
+    "front": ".jquery",
+    "back": "A string containing the jQuery version number."
+  },
+  {
+    "front": ".context",
+    "back": "The DOM node context originally passed to jQuery(); if none was passed then context will likely be the document."
+  },
+  {
+    "front": "jQuery.error()",
+    "back": "Takes a string and throws an exception containing it."
+  },
+  {
+    "front": ".length",
+    "back": "The number of elements in the jQuery object."
+  },
+  {
+    "front": ".pushStack()",
+    "back": "Add a collection of DOM elements onto the jQuery stack."
+  },
+  {
+    "front": ".selector",
+    "back": "A selector representing selector originally passed to jQuery()."
+  },
+  {
+    "front": "deferred.always()",
+    "back": "Add handlers to be called when the Deferred object is either resolved or rejected."
+  },
+  {
+    "front": "deferred.done()",
+    "back": "Add handlers to be called when the Deferred object is resolved."
+  },
+  {
+    "front": "deferred.fail()",
+    "back": "Add handlers to be called when the Deferred object is rejected."
+  },
+  {
+    "front": "deferred.isRejected()",
+    "back": "Determine whether a Deferred object has been rejected."
+  },
+  {
+    "front": "deferred.isResolved()",
+    "back": "Determine whether a Deferred object has been resolved."
+  },
+  {
+    "front": "deferred.notify()",
+    "back": "Call the progressCallbacks on a Deferred object with the given args."
+  },
+  {
+    "front": "deferred.notifyWith()",
+    "back": "Call the progressCallbacks on a Deferred object with the given context and args."
+  },
+  {
+    "front": "deferred.pipe()",
+    "back": "Utility method to filter and/or chain Deferreds."
+  },
+  {
+    "front": "deferred.progress()",
+    "back": "Add handlers to be called when the Deferred object generates progress notifications."
+  },
+  {
+    "front": "deferred.promise()",
+    "back": "Return a Deferred's Promise object."
+  },
+  {
+    "front": "deferred.reject()",
+    "back": "Reject a Deferred object and call any failCallbacks with the given args."
+  },
+  {
+    "front": "deferred.rejectWith()",
+    "back": "Reject a Deferred object and call any failCallbacks with the given context and args."
+  },
+  {
+    "front": "deferred.resolve()",
+    "back": "Resolve a Deferred object and call any doneCallbacks with the given args."
+  },
+  {
+    "front": "deferred.resolveWith()",
+    "back": "Resolve a Deferred object and call any doneCallbacks with the given context and args."
+  },
+  {
+    "front": "deferred.state()",
+    "back": "Determine the current state of a Deferred object."
+  },
+  {
+    "front": "deferred.then()",
+    "back": "Add handlers to be called when the Deferred object is resolved or rejected."
+  },
+  {
+    "front": ".promise()",
+    "back": "Return a Promise object to observe when all actions of a certain type bound to the collection, queued or not, have finished."
+  },
+  {
+    "front": "jQuery.Callbacks()",
+    "back": "A multi-purpose callbacks list object that provides a powerful way to manage callback lists."
+  },
+  {
+    "front": "callbacks.add()",
+    "back": "Add a callback or a collection of callbacks to a callback list."
+  },
+  {
+    "front": "callbacks.disable()",
+    "back": "Disable a callback list from doing anything more."
+  },
+  {
+    "front": "callbacks.empty()",
+    "back": "Remove all of the callbacks from a list."
+  },
+  {
+    "front": "callbacks.fire()",
+    "back": "Call all of the callbacks with the given arguments."
+  },
+  {
+    "front": "callbacks.fired()",
+    "back": "Determine if the callbacks have already been called at least once."
+  },
+  {
+    "front": "callbacks.fireWith()",
+    "back": "Call all callbacks in a list with the given context and arguments."
+  },
+  {
+    "front": "callbacks.has()",
+    "back": "Determine whether a supplied callback is in a list."
+  },
+  {
+    "front": "callbacks.lock()",
+    "back": "Lock a callback list in its current state."
+  },
+  {
+    "front": "callbacks.locked()",
+    "back": "Determine if the callbacks list has been locked."
+  },
+  {
+    "front": "callbacks.remove()",
+    "back": "Remove a callback or a collection of callbacks from a callback list."
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "front": ".clone()",
+    "back": "Create a deep copy of the set of matched elements."
+  },
+  {
+    "front": ".wrap()",
+    "back": "Wrap an HTML structure around each element in the set of matched elements."
+  },
+  {
+    "front": ".wrapAll()",
+    "back": "Wrap an HTML structure around all elements in the set of matched elements."
+  },
+  {
+    "front": ".wrapInner()",
+    "back": "Wrap an HTML structure around the content of each element in the set of matched elements."
+  },
+  {
+    "front": ".append()",
+    "back": "Insert content, specified by the parameter, to the end of each element in the set of matched elements."
+  },
+  {
+    "front": ".appendTo()",
+    "back": "Insert every element in the set of matched elements to the end of the target."
+  },
+  {
+    "front": ".html()",
+    "back": "Get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element."
+  },
+  {
+    "front": ".prepend()",
+    "back": "Insert content, specified by the parameter, to the beginning of each element in the set of matched elements."
+  },
+  {
+    "front": ".prependTo()",
+    "back": "Insert every element in the set of matched elements to the beginning of the target."
+  },
+  {
+    "front": ".text()",
+    "back": "Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements."
+  },
+  {
+    "front": ".after()",
+    "back": "Insert content, specified by the parameter, after each element in the set of matched elements."
+  },
+  {
+    "front": ".before()",
+    "back": "Insert content, specified by the parameter, before each element in the set of matched elements."
+  },
+  {
+    "front": ".insertAfter()",
+    "back": "Insert every element in the set of matched elements after the target."
+  },
+  {
+    "front": ".insertBefore()",
+    "back": "Insert every element in the set of matched elements before the target."
+  },
+  {
+    "front": ".detach()",
+    "back": "Remove the set of matched elements from the DOM."
+  },
+  {
+    "front": ".empty()",
+    "back": "Remove all child nodes of the set of matched elements from the DOM."
+  },
+  {
+    "front": ".remove()",
+    "back": "Remove the set of matched elements from the DOM."
+  },
+  {
+    "front": ".unwrap()",
+    "back": "Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place."
+  },
+  {
+    "front": ".replaceAll()",
+    "back": "Replace each target element with the set of matched elements."
+  },
+  {
+    "front": ".replaceWith()",
+    "back": "Replace each element in the set of matched elements with the provided new content."
+  }
+]
