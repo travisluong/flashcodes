@@ -63,12 +63,15 @@ var fc = {
 
   bindKeyPress: function() {
     $(document).on('keypress', function(e) {
+      if (!fc.gameStarted) {
+        return;
+      }
       if (e.keyCode === fc.DOWN_ARROW_KEY_CODE) {
         e.preventDefault();
         fc.toggleCard();
-      } else if (fc.gameStarted && e.keyCode === fc.RIGHT_ARROW_KEY_CODE ) {
+      } else if (e.keyCode === fc.RIGHT_ARROW_KEY_CODE ) {
         fc.correctCallback();
-      } else if (fc.gameStarted && e.keyCode === fc.LEFT_ARROW_KEY_CODE) {
+      } else if (e.keyCode === fc.LEFT_ARROW_KEY_CODE) {
         fc.wrongCallback();
       }      
     });
