@@ -93,42 +93,57 @@ var fc = {
   renderDeck: function(deck) {
     var deckFragment = $('<div class="deck">');
     deckFragment.append("<h2>" + deck.name + "</h2>");
-    deckFragment.append("<button data-name='"+ deck.name +"'>Play</button>")
+    deckFragment.append("<button data-name='"+ deck.name +"'>Play</button>");
     return deckFragment      
   },
 
   renderDecks: function(deckArray) {
     var decksFragment = $('<div class="decks">');
     deckArray.forEach(function(deck) {
-      var deckFragment = fc.renderDeck(deck)
+      var deckFragment = fc.renderDeck(deck);
       decksFragment.append(deckFragment);
     });
     return decksFragment;
   },
 
   renderCardsControls: function() {
-    var cardsControlsFragment = $('<div><button id="wrong">wrong</button><button id="correct">correct</button></div>');
+    var cardsControlsFragment = '<div><button id="wrong">wrong</button>'+
+      '<button id="correct">correct</button></div>';
     return cardsControlsFragment;
   },
 
-  renderGameInfo: function(currentCardIndex, currentCardsLength, correctCount, wrongCount) {
-    var cardsProgress = "<p>Progress: " + currentCardIndex + "/" + currentCardsLength + "</p>";
-    cardsProgress += "<p>Correct: " + correctCount + "</p>";
-    cardsProgress += "<p>Wrong: " + wrongCount + "</p>";
+  renderGameInfo: function(currentCardIndex, 
+    currentCardsLength, 
+    correctCount, 
+    wrongCount) {
+    var cardsProgress = "<p>Progress: " + currentCardIndex + "/" + 
+        currentCardsLength + "</p>" +
+        "<p>Correct: " + correctCount + "</p>" +
+        "<p>Wrong: " + wrongCount + "</p>";
     return cardsProgress;
+  },
+
+  renderCardRow: function(card) {
+    var cardFragment = $('<tr class="report-card-card">');
+    var correctClass = card.isCorrect ? "correct" : "wrong";
+    var cardTDs = "<td>" + card.front + "</td><td>" + card.back + 
+        "</td><td class='" + correctClass + "'>" + card.isCorrect + "</td>"
+    cardFragment.append(cardTDs);
+    return cardFragment;
   },
 
   renderReportCard: function(cards, correctCount) {
     var div = $('<div>');
     var reportCardFragment = $('<table class="report-card">');
-    var reportCardTHead = "<thead><tr><th>Front</th><th>Back</th><th>Correct?</th></tr></thead>";
+    var reportCardTHead = "<thead><tr><th>Front</th><th>Back</th>" + 
+        "<th>Correct?</th></tr></thead>";
     var reportCardTbody = $('<tbody>');
-    var reportCardPercentage = $("<p class='percentage'>Percentage: </p>").append(Math.round(correctCount / cards.length * 100) + "%");
+    var reportCardPercentage = $("<p class='percentage'>Percentage: </p>")
+    var percentage = Math.round(correctCount / cards.length * 100) + "%";
+    reportCardPercentage.append(percentage);
 
     cards.forEach(function(card) {
-      var cardFragment = $('<tr class="report-card-card">');
-      var correctClass = card.isCorrect ? "correct" : "wrong";
-      cardFragment.append("<td>" + card.front + "</td><td>" + card.back + "</td><td class='" + correctClass + "'>" + card.isCorrect + "</td>");
+      var cardFragment = fc.renderCardRow(card);
       reportCardTbody.append(cardFragment);
     });
 
@@ -194,7 +209,10 @@ var fc = {
 
   updateGameInfo: function() {
     fc.gameInfoDiv.empty();
-    var gameInfoFragment = fc.renderGameInfo(fc.currentCardIndex, fc.currentCards.length, fc.correctCount, fc.wrongCount);
+    var gameInfoFragment = fc.renderGameInfo(fc.currentCardIndex, 
+        fc.currentCards.length, 
+        fc.correctCount, 
+        fc.wrongCount);
     fc.gameInfoDiv.append(gameInfoFragment);
   },
 
