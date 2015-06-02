@@ -6,5 +6,37 @@
   {
     "front": ".show()",
     "back": "Show Element."
-  }
+  },
+  {
+    "front": ".hide()",
+    "back": "Hide Element."
+  },
+  {
+    "front": ".show()",
+    "back": "Show Element."
+  },
+  {
+    "front": ".hide()",
+    "back": "Hide Element."
+  },
+  {
+    "front": ".show()",
+    "back": "Show Element."
+  },
+  {
+    "front": ".hide()",
+    "back": "Hide Element."
+  },
+  {
+    "front": ".show()",
+    "back": "Show Element."
+  },
+  {
+    "front": ".hide()",
+    "back": "Hide Element."
+  },
+  {
+    "front": ".show()",
+    "back": "Show Element."
+  }  
 ]

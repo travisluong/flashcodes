@@ -9,25 +9,43 @@ body {
   font-family: Helvetica;
 }
 
-#decks {
-  background: #333;
-  color: #FFF;
-  height: 100vh;
-  width: 20%;
-  float: left;
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-#cards {
-  background: #000;
+th {
+  height: 50px;
+  background: #DB9E36;
+}
+
+td {
+  height: 50px;
+  padding: 15px;
+  background: #FFFAD5;
+}
+
+table, th, td {
+  border: 1px solid #000;
+}
+
+a {
   color: #FFF;
-  width: 80%;
-  float: left;
+}
+
+.correct {
+  color: #105B63;
+  font-weight: bold;
+}
+
+.wrong {
+  color: #BD4932;
+  font-weight: bold;
 }
 
 .deck {
   background: #FFFAD5;
   color: #105B63;
-  width: 67%;
   margin: 20px auto;
   padding: 10px;
 }
@@ -52,14 +70,92 @@ body {
 .card {
   background: #FFFAD5;
   color: #105B63;
-  width: 50%;
-  margin: 25vh;
-  height: 50vh;
-  position: absolute;
-  padding: 20px;
   font-size: 30px;
+  padding: 20px;
+  height: 30vh;
 }
 
 .card .back {
   display: none;
 }
+
+.percentage {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+#cards-controls {
+  float: left;
+  width: 100%;
+}
+
+#left-col {
+  float: left;
+  height: 100vh;
+  background: #333;
+  color: #FFF;
+  width: 20%;
+}
+
+#left-inner {
+  padding: 20px;
+}
+
+#decks {
+}
+
+#right-col {
+  background: #000;
+  float: left;
+  width: 80%;
+}
+
+#game-info {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 30px;
+  line-height: 1.5em;
+}
+
+#game-area {
+  width: 50%;
+  margin: auto;
+  margin-top: 5vh;
+  background: #FFD34E;
+  padding: 20px;
+  height: 100%;
+}
+
+#cards {
+  float: left;
+  display: block;
+  width: 100%;
+  color: #333;
+  font-size: 16px;
+}
+
+#cards-controls button {
+  margin-top: 20px;
+  width: 50%;
+  float: left;
+  color: #FFF;
+  font-size: 16px;
+  padding: 5%;
+  cursor: pointer;
+}
+
+#cards-controls #wrong {
+  background: #BD4932;
+  border: 0;
+}
+
+#cards-controls #correct {
+  background: #105B63;
+  border: 0;
+}
+
