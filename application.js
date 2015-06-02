@@ -55,14 +55,6 @@ fc.Deck = function(name, url) {
   this.size = function() {
     return cards.length;
   }
-
-  this.renderCards = function() {
-    var cardsFragment = $('<div class="cards">');
-    cards.forEach(function(card) {
-      cardsFragment.append(card.render());
-    });
-    return cardsFragment;
-  }
 }
 
 // events. code that handles events.
