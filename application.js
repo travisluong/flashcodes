@@ -5,10 +5,14 @@ var fc = {
 
   // config
   // --------------------------------------------------------------------------------
+  
+  // dom elements
   decksDiv: $('#decks'),
   cardsDiv: $('#cards'),
   cardsControlsDiv: $('#cards-controls'),
   gameInfoDiv: $('#game-info'),
+
+  // app state
   decks: [],
   currentCards: [],
   currentDeck: null,
@@ -16,12 +20,14 @@ var fc = {
   currentCardIndex: 0,
   correctCount: 0,
   wrongCount: 0,
+  gameStarted: false,
+
+  // constants
   LEFT_ARROW_KEY_CODE: 37,
   DOWN_ARROW_KEY_CODE: 40,
   RIGHT_ARROW_KEY_CODE: 39,
-  gameStarted: false,
 
-  // models
+  // models: encapsulate data
   // --------------------------------------------------------------------------------
   Card: function(args) {
     this.front = args.front;
@@ -34,7 +40,7 @@ var fc = {
     this.url = args.url;
   },
 
-  // events
+  // events: user action --> triggers event --> calls controller action
   // --------------------------------------------------------------------------------
   bindCards: function() {
     fc.cardsDiv.on('click', '.card', function() {
@@ -74,7 +80,7 @@ var fc = {
     fc.bindKeyPress();
   },
 
-  // views
+  // views: input data --> render function --> output html
   // --------------------------------------------------------------------------------
   renderCard: function(card) {
     var cardFragment = $('<div class="card">');
@@ -105,10 +111,10 @@ var fc = {
     return cardsControlsFragment;
   },
 
-  renderGameInfo: function() {
-    var cardsProgress = "<p>Progress: " + fc.currentCardIndex + "/" + fc.currentCards.length + "</p>";
-    cardsProgress += "<p>Correct: " + fc.correctCount + "</p>";
-    cardsProgress += "<p>Wrong: " + fc.wrongCount + "</p>";
+  renderGameInfo: function(currentCardIndex, currentCardsLength, correctCount, wrongCount) {
+    var cardsProgress = "<p>Progress: " + currentCardIndex + "/" + currentCardsLength + "</p>";
+    cardsProgress += "<p>Correct: " + correctCount + "</p>";
+    cardsProgress += "<p>Wrong: " + wrongCount + "</p>";
     return cardsProgress;
   },
 
@@ -131,7 +137,7 @@ var fc = {
     return div;
   },
 
-  // controllers
+  // controllers: controller actions --> update models, views, and app state
   // --------------------------------------------------------------------------------
   toggleCard: function() {
     fc.cardsDiv.find('.front').slideToggle();
@@ -188,7 +194,7 @@ var fc = {
 
   updateGameInfo: function() {
     fc.gameInfoDiv.empty();
-    var gameInfoFragment = fc.renderGameInfo();
+    var gameInfoFragment = fc.renderGameInfo(fc.currentCardIndex, fc.currentCards.length, fc.correctCount, fc.wrongCount);
     fc.gameInfoDiv.append(gameInfoFragment);
   },
 
@@ -208,7 +214,7 @@ var fc = {
     fc.currentCardIndex += 1;
     fc.currentCard.isCorrect = false;
     fc.wrongCount += 1;
-    fc.updateGameInfo();
+    fc.updateGameInfo(fc.current);
     fc.nextCardLogic();  
   },
 
@@ -243,7 +249,7 @@ var fc = {
     fc.wrongCount = 0;
   },
 
-  // init
+  // init: starting point of app
   // --------------------------------------------------------------------------------
   init: function() {
     fc.fetchDecks(function(deckArray) {
