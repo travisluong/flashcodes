@@ -57,15 +57,11 @@ fc.Deck = function(name, url) {
   }
 }
 
-// events. code that handles events.
+// events. code that handles events. use event delegation for future elements.
 // --------------------------------------------------------------------------------
-fc.Card.bind = function(cardFragment) {
-  cardFragment.on('click', function() {
-    fc.Card.clickCallback();
-  });
-  $(document).off('down_arrow_pressed');
-  $(document).on('down_arrow_pressed', function(e) {
-    fc.Card.clickCallback();
+fc.Card.bind = function() {
+  fc.cardsDiv.on('click', '.card', function() {
+    fc.toggleCard();
   });
 }
 
@@ -90,7 +86,7 @@ fc.bindCardsControls = function(cardsControlsFragment) {
   cardsControlsFragment.find('#correct').on('click', function() {
     fc.correctCallback();
   });
-  $(document).off('keypress');
+  // $(document).off('keypress');
   $(document).on('keypress', function(e) {
     if (fc.gameStarted && e.keyCode === fc.LEFT_ARROW_KEY_CODE) {
       fc.wrongCallback();
@@ -107,7 +103,7 @@ fc.bindKeyDown = function() {
   $(document).on('keypress', function(e) {
     if (e.keyCode === fc.DOWN_ARROW_KEY_CODE) {
       e.preventDefault();
-      $(document).trigger("down_arrow_pressed");
+      fc.toggleCard();
     }
   });
 }
@@ -171,9 +167,9 @@ fc.renderReportCard = function() {
 
 // actions. code that changes the state of the app. updates models and views.
 // --------------------------------------------------------------------------------
-fc.Card.clickCallback = function() {
-  $(this).find('.front').slideToggle();
-  $(this).find('.back').slideToggle();
+fc.toggleCard = function() {
+  fc.cardsDiv.find('.front').slideToggle();
+  fc.cardsDiv.find('.back').slideToggle();
 }
 
 fc.Deck.fetch = function(fn) {
@@ -192,7 +188,6 @@ fc.loadDeckCallback = function() {
   fc.updateCardsControls();
   fc.resetGameInfo();
   fc.updateGameInfo();
-  fc.bindKeyDown();
   fc.gameStarted = true;
 }
 
@@ -224,7 +219,6 @@ fc.updateGameInfo = function() {
 fc.loadCard = function(card) {
   fc.currentCard = card;
   var cardFragment = card.render();
-  fc.Card.bind(cardFragment);
   fc.cardsDiv.append(cardFragment);
 }
 
@@ -278,6 +272,7 @@ fc.init = function() {
     fc.loadDeck(fc.decks[0]);
     fc.bindKeyDown();
     fc.gameStarted = true;
+    fc.Card.bind();
   });
 }
 
