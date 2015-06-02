@@ -8,7 +8,11 @@ var fc = {
   currentCard: null,
   currentCardIndex: 0,
   correctCount: 0,
-  wrongCount: 0
+  wrongCount: 0,
+  LEFT_ARROW_KEY_CODE: 37,
+  DOWN_ARROW_KEY_CODE: 40,
+  RIGHT_ARROW_KEY_CODE: 39,
+  gameStarted: false
 };
 
 fc.Card = function(front, back) {
@@ -26,10 +30,20 @@ fc.Card.prototype.render = function() {
   return cardFragment;      
 }
 
+fc.Card.clickCallback = function() {
+  $(this).find('.front').slideToggle();
+  $(this).find('.back').slideToggle();
+}
+
 fc.Card.bind = function(cardFragment) {
   cardFragment.on('click', function() {
-    $(this).find('.front').slideToggle();
-    $(this).find('.back').slideToggle();
+    fc.Card.clickCallback();
+  });
+
+  $(document).off('down_arrow_pressed');
+
+  $(document).on('down_arrow_pressed', function(e) {
+    fc.Card.clickCallback();
   });
 }
 
@@ -110,21 +124,24 @@ fc.Deck.fetch = function(fn) {
   });    
 }
 
+fc.loadDeckCallback = function() {
+  fc.loadCard(fc.currentDeck.getCards()[0]);
+  fc.updateCardsControls();
+  fc.resetGameInfo();
+  fc.updateGameInfo();
+  fc.bindKeyDown();
+  fc.gameStarted = true;
+}
+
 fc.loadDeck = function(deck) {
   fc.cardsDiv.empty();
   fc.currentDeck = deck;
   if (fc.currentDeck.size() === 0) {
     fc.currentDeck.fetchCards(function() {
-      fc.loadCard(fc.currentDeck.getCards()[0]);
-      fc.updateCardsControls();
-      fc.resetGameInfo();
-      fc.updateGameInfo();
+      fc.loadDeckCallback();
     });
   } else {
-    fc.loadCard(fc.currentDeck.getCards()[0]);
-    fc.updateCardsControls();
-    fc.resetGameInfo();
-    fc.updateGameInfo();
+    fc.loadDeckCallback();
   }
 }
 
@@ -153,27 +170,47 @@ fc.renderCardsControls = function() {
   return cardsControlsFragment;
 }
 
+fc.wrongCallback = function() {
+  fc.currentCardIndex += 1;
+  fc.currentCard.isCorrect = false;
+  fc.wrongCount += 1;
+  fc.updateGameInfo();
+  fc.nextCardLogic();  
+}
+
+fc.correctCallback = function() {
+  fc.currentCardIndex += 1;
+  fc.currentCard.isCorrect = true;
+  fc.correctCount += 1;
+  fc.updateGameInfo();
+  fc.nextCardLogic();
+}
+
 fc.bindCardsControls = function(cardsControlsFragment) {
   cardsControlsFragment.find('#wrong').on('click', function() {
-    fc.currentCardIndex += 1;
-    fc.currentCard.isCorrect = false;
-    fc.wrongCount += 1;
-    fc.updateGameInfo();
-    fc.nextCardLogic();
+    fc.wrongCallback();
   });
   cardsControlsFragment.find('#correct').on('click', function() {
-    fc.currentCardIndex += 1;
-    fc.currentCard.isCorrect = true;
-    fc.correctCount += 1;
-    fc.updateGameInfo();
-    fc.nextCardLogic();
+    fc.correctCallback();
   });
+  $(document).off('keypress');
+  $(document).on('keypress', function(e) {
+    if (fc.gameStarted && e.keyCode === fc.LEFT_ARROW_KEY_CODE) {
+      fc.wrongCallback();
+    }
+  });
+  $(document).on('keypress', function(e) {
+    if (fc.gameStarted && e.keyCode === fc.RIGHT_ARROW_KEY_CODE ) {
+      fc.correctCallback();
+    }
+  });  
 }
 
 fc.nextCardLogic = function() {
   if (fc.currentCardIndex < fc.currentDeck.size()) {
     fc.showNextCard();
   } else {
+    fc.gameStarted = false;
     var reportCard = fc.renderReportCard();
     fc.cardsDiv.empty();
     fc.cardsControlsDiv.empty();
@@ -218,12 +255,24 @@ fc.resetGameInfo = function() {
   fc.wrongCount = 0;
 }
 
+fc.bindKeyDown = function() {
+  $(document).on('keypress', function(e) {
+    if (e.keyCode === fc.DOWN_ARROW_KEY_CODE) {
+      e.preventDefault();
+      $(document).trigger("down_arrow_pressed");
+    }
+  });
+}
+
 fc.init = function() {
   fc.Deck.fetch(function(deckArray) {
     fc.decks = deckArray;
     var decksFragment = fc.Deck.render(deckArray);
     fc.Deck.bind(decksFragment);
     fc.decksDiv.append(decksFragment);
+    fc.loadDeck(fc.decks[0]);
+    fc.bindKeyDown();
+    fc.gameStarted = true;
   });
 }
 

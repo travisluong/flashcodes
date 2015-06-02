@@ -4,10 +4,6 @@
     "url": "decks/tutorial.json"
   },
   {
-    "name": "jQuery",
-    "url": "decks/jquery.json"
-  },
-  {
     "name": "jQuery Selectors",
     "url": "decks/jquery_selectors.json"
   },
