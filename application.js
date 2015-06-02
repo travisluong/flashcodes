@@ -65,8 +65,8 @@ fc.Card.bind = function() {
   });
 }
 
-fc.Deck.bind = function(decksFragment) {
-  decksFragment.on('click', 'button', function(e) {
+fc.Deck.bind = function() {
+  fc.decksDiv.on('click', 'button', function(e) {
     var name = $(this).data('name');
     var deck = fc.decks.find(function(element, index, array) {
       if (element.name === name) {
@@ -261,13 +261,13 @@ fc.init = function() {
   fc.Deck.fetch(function(deckArray) {
     fc.decks = deckArray;
     var decksFragment = fc.Deck.render(deckArray);
-    fc.Deck.bind(decksFragment);
     fc.decksDiv.append(decksFragment);
+    fc.Deck.bind();
     fc.loadDeck(fc.decks[0]);
     fc.bindKeyDown();
-    fc.gameStarted = true;
     fc.Card.bind();
     fc.bindCardsControls();
+    fc.gameStarted = true;
   });
 }
 
