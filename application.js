@@ -23,15 +23,15 @@ var fc = {
 
   // models
   // --------------------------------------------------------------------------------
-  Card: function(front, back) {
-    this.front = front;
-    this.back = back;
+  Card: function(args) {
+    this.front = args.front;
+    this.back = args.back;
     this.isCorrect = null;
   },
 
-  Deck: function(name, url) {
-    this.name = name;
-    this.url = url;
+  Deck: function(args) {
+    this.name = args.name;
+    this.url = args.url;
   },
 
   // events
@@ -140,13 +140,19 @@ var fc = {
 
   fetchDecks: function(fn) {
     $.getJSON("decks.json", function(data) {
-      fn(data);
-    });    
+      var decksArray = data.map(function(obj) {
+        return new fc.Deck(obj);
+      });
+      fn(decksArray);
+    });
   },
 
   fetchCards: function(deck, fn) {
     $.getJSON(deck.url, function(data) {
-      fc.currentCards = data;
+      var cards = data.map(function(obj) {
+        return new fc.Card(obj);
+      });
+      fc.currentCards = cards;
       fn();
     });
   },
