@@ -12,6 +12,11 @@ var fc = {
   cardsControlsDiv: $('#cards-controls'),
   gameInfoDiv: $('#game-info'),
 
+  // constants
+  LEFT_ARROW_KEY_CODE: 37,
+  DOWN_ARROW_KEY_CODE: 40,
+  RIGHT_ARROW_KEY_CODE: 39,
+  
   // app state
   decks: [],
   currentCards: [],
@@ -22,10 +27,6 @@ var fc = {
   wrongCount: 0,
   gameStarted: false,
 
-  // constants
-  LEFT_ARROW_KEY_CODE: 37,
-  DOWN_ARROW_KEY_CODE: 40,
-  RIGHT_ARROW_KEY_CODE: 39,
 
   // models: encapsulate data
   // --------------------------------------------------------------------------------
@@ -83,73 +84,67 @@ var fc = {
   // views: input data --> render function --> output html
   // --------------------------------------------------------------------------------
   renderCard: function(card) {
-    var cardFragment = $('<div class="card">');
-    var front = $('<div class="front">').append(card.front);
-    var back = $('<div class="back">').append(card.back);
-    cardFragment.append(front).append(back);
-    return cardFragment;      
+    var html = '<div class="card">' + 
+      '<div class="front">' + card.front + '</div>' +
+      '<div class="back">' + card.back + '</div>' +
+      '</div>';
+    return html;
   },
 
   renderDeck: function(deck) {
-    var deckFragment = $('<div class="deck">');
-    deckFragment.append("<h2>" + deck.name + "</h2>");
-    deckFragment.append("<button data-name='"+ deck.name +"'>Play</button>");
-    return deckFragment      
+    var html = '<div class="deck">' +
+      '<h2>' + deck.name + '</h2>' +
+      '<button data-name="'+ deck.name + '">Play</button>' +
+      "</div>";
+    return html;  
   },
 
   renderDecks: function(deckArray) {
-    var decksFragment = $('<div class="decks">');
+    var html = '<div class="decks">';
     deckArray.forEach(function(deck) {
-      var deckFragment = fc.renderDeck(deck);
-      decksFragment.append(deckFragment);
+      html += fc.renderDeck(deck);
     });
-    return decksFragment;
+    html += '</div>';
+    return html;
   },
 
   renderCardsControls: function() {
-    var cardsControlsFragment = '<div><button id="wrong">wrong</button>'+
-      '<button id="correct">correct</button></div>';
-    return cardsControlsFragment;
+    var html = '<div>' + 
+      '<button id="wrong">wrong</button>' +
+      '<button id="correct">correct</button>' +
+      '</div>';
+    return html;
   },
 
-  renderGameInfo: function(currentCardIndex, 
-    currentCardsLength, 
-    correctCount, 
-    wrongCount) {
-    var cardsProgress = "<p>Progress: " + currentCardIndex + "/" + 
-        currentCardsLength + "</p>" +
-        "<p>Correct: " + correctCount + "</p>" +
-        "<p>Wrong: " + wrongCount + "</p>";
-    return cardsProgress;
+  renderGameInfo: function(cardIndex, cardsLength, correctCount, wrongCount) {
+    var html = '<p>Progress: ' + cardIndex + '/' + cardsLength + '</p>' +
+      '<p>Correct: ' + correctCount + '</p>' +
+      '<p>Wrong: ' + wrongCount + '</p>';
+    return html;
   },
 
   renderCardRow: function(card) {
-    var cardFragment = $('<tr class="report-card-card">');
-    var correctClass = card.isCorrect ? "correct" : "wrong";
-    var cardTDs = "<td>" + card.front + "</td><td>" + card.back + 
-        "</td><td class='" + correctClass + "'>" + card.isCorrect + "</td>"
-    cardFragment.append(cardTDs);
-    return cardFragment;
+    var classAttr = card.isCorrect ? 'correct' : 'wrong';
+    var html = '<tr class="report-card-card">' +
+      '<td>' + card.front + '</td>' +
+      '<td>' + card.back + '</td>' + 
+      '<td class="' + classAttr + '">' + card.isCorrect + '</td>' +
+      '</tr>';
+    return html;
   },
 
   renderReportCard: function(cards, correctCount) {
-    var div = $('<div>');
-    var reportCardFragment = $('<table class="report-card">');
-    var reportCardTHead = "<thead><tr><th>Front</th><th>Back</th>" + 
-        "<th>Correct?</th></tr></thead>";
-    var reportCardTbody = $('<tbody>');
-    var reportCardPercentage = $("<p class='percentage'>Percentage: </p>")
     var percentage = Math.round(correctCount / cards.length * 100) + "%";
-    reportCardPercentage.append(percentage);
-
+    var html = '<div>' +
+      '<table class="report-card">' + 
+      "<thead><tr><th>Front</th><th>Back</th><th>Correct?</th></tr></thead>" +
+      '<tbody>';
     cards.forEach(function(card) {
-      var cardFragment = fc.renderCardRow(card);
-      reportCardTbody.append(cardFragment);
+      html += fc.renderCardRow(card);
     });
-
-    reportCardFragment.append(reportCardTHead).append(reportCardTbody);
-    div.append(reportCardFragment).append(reportCardPercentage);
-    return div;
+    html += '</tbody></table>' +
+      "<p class='percentage'>Percentage:" + percentage + " </p>";
+    return html;
   },
 
   // controllers: controller actions --> update models, views, and app state
