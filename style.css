@@ -87,8 +87,16 @@ p {
   color: #105B63;
   font-size: 30px;
   padding: 20px;
-  height: 30vh;
+  height: 50vh;
   position: relative;
+}
+
+.card a, .report-card a {
+  color: #105B63;
+}
+
+.card a:hover, .report-card a:hover {
+  color: #DB9E36;
 }
 
 .percentage {

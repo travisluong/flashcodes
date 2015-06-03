@@ -1,18 +1,14 @@
 [
   {
-    "front": "Welcome to Flash Codes. Click on this card to continue the tutorial.",
-    "back": "Clicking on a card flips it to the back. Click on wrong or correct to continue."
+    "front": "Welcome to Flash Codes, a flash card app for quickly learning APIs.<br><br>Shortcuts:<br>Down arrow - Flip card.<br>Left arrow - Mark card as wrong.<br>Right arrow - Mark card as correct.<br><br>Good luck!",
+    "back": "Hello World!"
   },
   {
-    "front": "You can also press the left key for wrong and the right key for correct.",
-    "back": "Press the left or right key to continue"
+    "front": "Credits",
+    "back": "Designed and developed by Travis Luong"
   },
   {
-    "front": "You can press the down key to flip the card.",
-    "back": "Choose wrong or right to continue."
-  },
-  {
-    "front": "Your score will be displayed on when you are done.",
-    "back": "Good luck!"
+    "front": "Special Thanks",
+    "back": "<a href='http://oscarotero.com/jquery/'>jQuery Cheatsheet</a>"
   }
 ]
