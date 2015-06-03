@@ -70,9 +70,13 @@ var fc = {
   },
 
   bindKeyPress: function() {
-    $(document).on('keypress', function(e) {
+    $(document).on('keydown', function(e) {
       fc.handleKeyPress(e);
     });
+  },
+
+  bindWindowResize: function() {
+    $(window).resize(fc.handleWindowResize);
   },
 
   bindUserOptions: function() {
@@ -86,6 +90,7 @@ var fc = {
     fc.bindCardsControls();
     fc.bindKeyPress();
     fc.bindUserOptions();
+    fc.bindWindowResize();
   },
 
   // actions
@@ -103,6 +108,10 @@ var fc = {
     } else if (e.keyCode === fc.LEFT_ARROW_KEY_CODE) {
       fc.incrementWrong();
     }      
+  },
+
+  handleWindowResize: function() {
+    fc.cardsDiv.css('height', '');
   },
 
   incrementCorrect: function() {
@@ -201,10 +210,10 @@ var fc = {
     fc.currentCard = card;
     var cardFragment = fc.renderCard(card, fc.userOptions.backFirst);
     fc.cardsDiv.append(cardFragment);
-    var gameAreaHeight = fc.gameAreaDiv.height();
-    fc.gameAreaDiv.css('height', gameAreaHeight);
+    fc.gameAreaDiv.css('height', fc.gameAreaDiv.height());
     fc.cardsDiv.css('height', fc.cardsDiv.height());
     var cardDiv = fc.cardsDiv.find('.card').last();
+    fc.cardsControlsDiv.css('height', fc.cardsControlsDiv.height());
     cardDiv.css({'left': '-101%', 
       'position': 'absolute', 
       'height': cardDiv.height(), 
@@ -213,9 +222,9 @@ var fc = {
     cardDiv.animate({
       left: "0"
     }, 200, function() {
-      fc.gameAreaDiv.css('height', 'auto');
-      fc.cardsDiv.css('height', 'auto');
-      cardDiv.css({'left': '', 'position': 'relative', 'height': '', 'width': ''});
+      fc.gameAreaDiv.css('height', '');
+      cardDiv.css({'left': '', 'position': '', 'height': '', 'width': ''});
+      fc.cardsControlsDiv.css('height', '');
     });
   },
 
