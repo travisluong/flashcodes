@@ -172,13 +172,9 @@ var fc = {
   },
 
   loadDeckByName: function(name) {
-    var deck = fc.decks.find(function(element, index, array) {
-      if (element.name === name) {
-        return true;
-      } else {
-        return false;
-      }
-    });
+    var deck = fc.decks.filter(function(d) {
+      return d.name === name;
+    })[0];
     fc.cardsDiv.empty();
     fc.currentDeck = deck;
     fc.fetchCards(deck, function(cards) {
