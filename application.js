@@ -37,7 +37,7 @@ var fc = {
     backFirst: false
   },
 
-  // models: encapsulate data
+  // models
   // --------------------------------------------------------------------------------
   Card: function(args) {
     this.front = args.front;
@@ -50,7 +50,7 @@ var fc = {
     this.url = args.url;
   },
 
-  // events: user action --> triggers event --> calls action
+  // events
   // --------------------------------------------------------------------------------
   bindCards: function() {
     fc.cardsDiv.on('click', '.card', function() {
@@ -88,7 +88,7 @@ var fc = {
     fc.bindUserOptions();
   },
 
-  // actions. stuff that happens in response to events.
+  // actions
   // --------------------------------------------------------------------------------
 
   handleKeyPress: function(e) {
@@ -137,12 +137,11 @@ var fc = {
   },
 
   toggleCard: function() {
-    fc.cardsDiv.find('.front').slideToggle();
-    fc.cardsDiv.find('.back').slideToggle();
+    fc.cardsDiv.find('.front').slideToggle(100);
+    fc.cardsDiv.find('.back').slideToggle(100);
   },  
 
-  // helpers. helps keep code DRY. 
-  // encapsulate code that is called in multiple actions.
+  // helpers
   // --------------------------------------------------------------------------------
 
   fetchDecks: function(fn) {
@@ -202,6 +201,22 @@ var fc = {
     fc.currentCard = card;
     var cardFragment = fc.renderCard(card, fc.userOptions.backFirst);
     fc.cardsDiv.append(cardFragment);
+    var gameAreaHeight = fc.gameAreaDiv.height();
+    fc.gameAreaDiv.css('height', gameAreaHeight);
+    fc.cardsDiv.css('height', fc.cardsDiv.height());
+    var cardDiv = fc.cardsDiv.find('.card').last();
+    cardDiv.css({'left': '-101%', 
+      'position': 'absolute', 
+      'height': cardDiv.height(), 
+      'width': cardDiv.width()
+    });
+    cardDiv.animate({
+      left: "0"
+    }, 200, function() {
+      fc.gameAreaDiv.css('height', 'auto');
+      fc.cardsDiv.css('height', 'auto');
+      cardDiv.css({'left': '', 'position': 'relative', 'height': '', 'width': ''});
+    });
   },
 
   loadDecks: function(deckArray) {
@@ -223,7 +238,12 @@ var fc = {
   },
 
   showNextCard: function() {
-    fc.cardsDiv.find('.card').remove();
+    var cardDiv = fc.cardsDiv.find('.card');
+    cardDiv.css({'position': 'absolute', 'width': cardDiv.width()}).animate({
+      left: "101%"
+    }, 200, function() {
+      $(this).remove();
+    });
     fc.loadCard(fc.currentCards[fc.currentCardIndex]);
   },
 
@@ -232,7 +252,7 @@ var fc = {
     return o;
   },
 
-  // views. input data --> output html
+  // views
   // --------------------------------------------------------------------------------
   renderCard: function(card, backFirst) {
     if (!backFirst) {
@@ -297,7 +317,7 @@ var fc = {
     return html;
   },
 
-  // init: starting point of app
+  // init
   // --------------------------------------------------------------------------------
   init: function() {
     fc.fetchDecks(function(deckArray) {
