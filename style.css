@@ -48,6 +48,10 @@ p {
   margin-bottom: 20px;
 }
 
+.report-card {
+  color: #333;
+}
+
 .btnOn {
   background: #105B63 !important;
 }
@@ -90,6 +94,7 @@ p {
   margin-top: 20px;
   font-size: 30px;
   color: #FFFFFF;
+  text-align: center;
 }
 
 .clearfix {
