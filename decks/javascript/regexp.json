@@ -1,110 +1,110 @@
 [
   {
-    "front": null,
+    "front": "Perform case-insensitive matching",
     "back": "i"
   },
   {
-    "front": null,
+    "front": "",
     "back": "g"
   },
   {
-    "front": null,
+    "front": "Find any character between the brackets",
     "back": "[abc]"
   },
   {
-    "front": null,
+    "front": "Find any character not between the brackets",
     "back": "[^abc]"
   },
   {
-    "front": null,
+    "front": "Find a single character, except newline or line terminator",
     "back": "."
   },
   {
-    "front": null,
+    "front": "Find a word character",
     "back": "\\w"
   },
   {
-    "front": null,
+    "front": "Find a non-word character",
     "back": "\\W"
   },
   {
-    "front": null,
+    "front": "Find a digit",
     "back": "\\d"
   },
   {
-    "front": null,
+    "front": "Find a non-digit character",
     "back": "\\D"
   },
   {
-    "front": null,
+    "front": "Find a whitespace character",
     "back": "\\s"
   },
   {
-    "front": null,
+    "front": "Find a non-whitespace character",
     "back": "\\S"
   },
   {
-    "front": null,
+    "front": "Find a match at the beginning/end of a word",
     "back": "\\b"
   },
   {
-    "front": null,
+    "front": "Find a match not at the beginning/end of a word",
     "back": "\\B"
   },
   {
-    "front": null,
+    "front": "Find a new line character",
     "back": "\\n"
   },
   {
-    "front": null,
+    "front": "Find the character specified by an octal number xxx",
     "back": "\\xxx"
   },
   {
-    "front": null,
+    "front": "Find the character specified by a hexadecimal number dd",
     "back": "\\xdd"
   },
   {
-    "front": null,
+    "front": "Find the Unicode character specified by a hexadecimal number xxxx",
     "back": "\\uxxxx"
   },
   {
-    "front": null,
+    "front": "Matches any string that contains at least one n",
     "back": "n+"
   },
   {
-    "front": null,
+    "front": "Matches any string that contains zero or more occurrences of n",
     "back": "n*"
   },
   {
-    "front": null,
+    "front": "Matches any string that contains zero or one occurrences of n",
     "back": "n?"
   },
   {
-    "front": null,
+    "front": "Matches any string that contains a sequence of X n's",
     "back": "n{X}"
   },
   {
-    "front": null,
+    "front": "Matches any string that contains a sequence of X to Y n's",
     "back": "n{X,Y}"
   },
   {
-    "front": null,
+    "front": "Matches any string that contains a sequence of at least X n's",
     "back": "n{X,}"
   },
   {
-    "front": null,
+    "front": "Matches any string with n at the end of it",
     "back": "n$"
   },
   {
-    "front": null,
+    "front": "Matches any string with n at the beginning of it",
     "back": "^n"
   },
   {
-    "front": null,
+    "front": "Matches any string that is followed by a specific string n",
     "back": "?=n"
   },
   {
-    "front": null,
+    "front": "Matches any string that is not followed by a specific string n",
     "back": "?!n"
   },
   {
