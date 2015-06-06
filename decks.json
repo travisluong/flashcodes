@@ -42,11 +42,7 @@
       {
         "name": "RegExp",
         "url": "decks/javascript/regexp.json"
-      },
-      {
-        "name": "Resource",
-        "url": "decks/javascript/resource.json"
-      }                                  
+      }                               
     ]
   },
   {
