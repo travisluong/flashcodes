@@ -1,0 +1,154 @@
+[
+  {
+    "front": "Adds an arc to the path which it center is at (x, y) position with radius r starting at startAngle and ending at endAngle going in the given direction by anticlockwise (defaulting to clockwise).",
+    "back": "arc()"
+  },
+  {
+    "front": "Adds an arc with the given control points and radius, connected to the previous point by a straight line.",
+    "back": "arcTo()"
+  },
+  {
+    "front": "Starts a new path by resetting the list of sub-paths. Call this method when you want to create a new path.",
+    "back": "beginPath()"
+  },
+  {
+    "front": "void bezierCurveTo(\n                  in float cp1x,\n                  in float cp1y,\n                  in float cp2x,\n                  in float cp2y,\n                  in float x,\n                  in float y\n                );",
+    "back": "bezierCurveTo()"
+  },
+  {
+    "front": "Clears the rectangle defined by it starting point at (x, y) and has a w width and a h height.",
+    "back": "clearRect()"
+  },
+  {
+    "front": "Creates a clipping path from the current sub-paths. Everything drawn after clip() is called appears inside the clipping path only. For an example, see Clipping paths in the Canvas tutorial.",
+    "back": "clip()"
+  },
+  {
+    "front": "Tries to draw a straight line from the current point to the start. If the shape has already been closed or has only one point, this function does nothing.",
+    "back": "closePath()"
+  },
+  {
+    "front": "Creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black.",
+    "back": "createImageData()"
+  },
+  {
+    "front": "nsIDOMCanvasGradient createLinearGradient(\n                  in float x0,\n                  in float y0,\n                  in float x1,\n                  in float y1\n                );",
+    "back": "createLinearGradient()"
+  },
+  {
+    "front": "nsIDOMCanvasPattern createPattern(\n                  in nsIDOMHTMLElement image,\n                  in DOMString repetition\n                );",
+    "back": "createPattern()"
+  },
+  {
+    "front": "nsIDOMCanvasGradient createRadialGradient(\n                  in float x0,\n                  in float y0,\n                  in float r0,\n                  in float x1,\n                  in float y1,\n                  in float r1\n                );",
+    "back": "createRadialGradient()"
+  },
+  {
+    "front": "boolean drawCustomFocusRing(Element element);",
+    "back": "drawCustomFocusRing()"
+  },
+  {
+    "front": "Draws the specified image. This method is available in multiple formats, providing a great deal of flexibility in its use.",
+    "back": "drawImage()"
+  },
+  {
+    "front": "void drawSystemFocusRing(Element element);",
+    "back": "drawSystemFocusRing()"
+  },
+  {
+    "front": "Fills the subpaths with the current fill style.",
+    "back": "fill()"
+  },
+  {
+    "front": "Draws a filled rectangle at (x, y) position whose size is determined by width and height.",
+    "back": "fillRect()"
+  },
+  {
+    "front": "void fillText(\n                  in DOMString text,\n                  in float x,\n                  in float y,\n                  in float maxWidth [optional]\n                );",
+    "back": "fillText()"
+  },
+  {
+    "front": "Returns an ImageData object representing the underlying pixel data for the area of the canvas denoted by the rectangle which starts at (sx, sy) and has a sw width and sh height.",
+    "back": "getImageData()"
+  },
+  {
+    "front": "Returns an dash list array containing an even number of non-negative numbers.",
+    "back": "getLineDash()"
+  },
+  {
+    "front": "Reports whether or not the specified point is contained in the current path.",
+    "back": "isPointInPath()"
+  },
+  {
+    "front": "Connects the last point in the subpath to the x, y coordinates with a straight line.",
+    "back": "lineTo()"
+  },
+  {
+    "front": "nsIDOMTextMetrics measureText(\n                  in DOMString text\n                );",
+    "back": "measureText()"
+  },
+  {
+    "front": "Moves the starting point of a new subpath to the (x, y) coordinates.",
+    "back": "moveTo()"
+  },
+  {
+    "front": "void putImageData(\n                  in long x,\n                  in long y,\n                  in unsigned long width,\n                  in unsigned long height,\n                  [array, size_is(dataLen)] in octet dataPtr,\n                  in unsigned long dataLen,\n                  in boolean hasDirtyRect,\n                  in long dirtyX, [optional]\n                  in long dirtyY, [optional]\n                  in long dirtyWidth, [optional]\n                  in long dirtyHeight [optional]\n                );",
+    "back": "putImageData()"
+  },
+  {
+    "front": "void quadraticCurveTo(\n                  in float cpx,\n                  in float cpy,\n                  in float x,\n                  in float y\n                );",
+    "back": "quadraticCurveTo()"
+  },
+  {
+    "front": "void rect(\n                  in float x,\n                  in float y,\n                  in float w,\n                  in float h\n                );",
+    "back": "rect()"
+  },
+  {
+    "front": "Restores the drawing style state to the last element on the 'state stack' saved by save()",
+    "back": "restore()"
+  },
+  {
+    "front": "void rotate(\n                  in float angle\n                );",
+    "back": "rotate()"
+  },
+  {
+    "front": "Saves the current drawing style state using a stack so you can revert any change you make to it using restore().",
+    "back": "save()"
+  },
+  {
+    "front": "void scale(\n                  in float x,\n                  in float y\n                );",
+    "back": "scale()"
+  },
+  {
+    "front": "void scrollPathIntoView();",
+    "back": "scrollPathIntoView()"
+  },
+  {
+    "front": "void setLineDash(\n                  sequence segments\n                );",
+    "back": "setLineDash()"
+  },
+  {
+    "front": "void setTransform(\n                  in float m11,\n                  in float m12,\n                  in float m21,\n                  in float m22,\n                  in float dx,\n                  in float dy\n                );",
+    "back": "setTransform()"
+  },
+  {
+    "front": "Strokes the subpaths with the current stroke style.",
+    "back": "stroke()"
+  },
+  {
+    "front": "Paints a rectangle which it starting point is at (x, y) and has a w width and a h height onto the canvas, using the current stroke style.",
+    "back": "strokeRect()"
+  },
+  {
+    "front": "void strokeText(\n                  in DOMString text,\n                  in float x,\n                  in float y,\n                  in float maxWidth [optional]\n                );",
+    "back": "strokeText()"
+  },
+  {
+    "front": "void transform(\n                  in float m11,\n                  in float m12,\n                  in float m21,\n                  in float m22,\n                  in float dx,\n                  in float dy\n                );",
+    "back": "transform()"
+  },
+  {
+    "front": "Moves the origin point of the context to (x, y).",
+    "back": "translate()"
+  }
+]

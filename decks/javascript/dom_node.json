@@ -1,0 +1,238 @@
+[
+  {
+    "front": "Returns a collection of a node's attributes",
+    "back": "attributes"
+  },
+  {
+    "front": "Returns the absolute base URI of a node",
+    "back": "baseURI"
+  },
+  {
+    "front": "Returns a NodeList of child nodes for a node",
+    "back": "childNodes"
+  },
+  {
+    "front": "Returns the first child of a node",
+    "back": "firstChild"
+  },
+  {
+    "front": "Returns the last child of a node",
+    "back": "lastChild"
+  },
+  {
+    "front": "Returns the local part of the name of a node",
+    "back": "localName"
+  },
+  {
+    "front": "Returns the namespace URI of a node",
+    "back": "namespaceURI"
+  },
+  {
+    "front": "Returns the next node at the same node tree level",
+    "back": "nextSibling"
+  },
+  {
+    "front": "Returns the name of a node, depending on its type",
+    "back": "nodeName"
+  },
+  {
+    "front": "Returns the type of a node",
+    "back": "nodeType"
+  },
+  {
+    "front": "Sets or returns the value of a node, depending on its type",
+    "back": "nodeValue"
+  },
+  {
+    "front": "Returns the root element (document object) for a node",
+    "back": "ownerDocument"
+  },
+  {
+    "front": "Returns the parent node of a node",
+    "back": "parentNode"
+  },
+  {
+    "front": "Sets or returns the namespace prefix of a node",
+    "back": "prefix"
+  },
+  {
+    "front": "Returns the previous node at the same node tree level",
+    "back": "previousSibling"
+  },
+  {
+    "front": "Sets or returns the textual content of a node and its descendants",
+    "back": "textContent"
+  },
+  {
+    "front": "Adds a new child node, to the specified node, as the last child node",
+    "back": "appendChild()"
+  },
+  {
+    "front": "Clones a node",
+    "back": "cloneNode()"
+  },
+  {
+    "front": "Compares the document position of two nodes",
+    "back": "compareDocumentPosition()"
+  },
+  {
+    "front": "Returns true if a node has any attributes, otherwise it returns false",
+    "back": "hasAttributes()"
+  },
+  {
+    "front": "Returns true if a node has any child nodes, otherwise it returns false",
+    "back": "hasChildNodes()"
+  },
+  {
+    "front": "Inserts a new child node before a specified, existing, child node",
+    "back": "insertBefore()"
+  },
+  {
+    "front": "Returns true if the specified namespaceURI is the default, otherwise false",
+    "back": "isDefaultNamespace()"
+  },
+  {
+    "front": "Checks if two nodes are equal",
+    "back": "isEqualNode()"
+  },
+  {
+    "front": "Checks if two nodes are the same node",
+    "back": "isSameNode()"
+  },
+  {
+    "front": "Returns true if a specified feature is supported on a node, otherwise false",
+    "back": "isSupported()"
+  },
+  {
+    "front": "Returns the namespace URI matching a specified prefix",
+    "back": "lookupNamespaceURI()"
+  },
+  {
+    "front": "Returns the prefix matching a specified namespace URI",
+    "back": "lookupPrefix()"
+  },
+  {
+    "front": "Joins adjacent text nodes and removes empty text nodes",
+    "back": "normalize()"
+  },
+  {
+    "front": "Removes a child node",
+    "back": "removeChild()"
+  },
+  {
+    "front": "Replaces a child node",
+    "back": "replaceChild()"
+  },
+  {
+    "front": null,
+    "back": "feature"
+  },
+  {
+    "front": null,
+    "back": "version"
+  },
+  {
+    "front": null,
+    "back": "key"
+  },
+  {
+    "front": null,
+    "back": "setUserData(key,data,handler)"
+  },
+  {
+    "front": "Represents an element",
+    "back": "Element"
+  },
+  {
+    "front": null,
+    "back": "1"
+  },
+  {
+    "front": "Represents an attribute",
+    "back": "Attr"
+  },
+  {
+    "front": null,
+    "back": "2"
+  },
+  {
+    "front": "Represents textual content in an element or attribute",
+    "back": "Text"
+  },
+  {
+    "front": null,
+    "back": "3"
+  },
+  {
+    "front": "Represents a CDATA section in a document (text that will NOT be parsed by a parser)",
+    "back": "CDATASection"
+  },
+  {
+    "front": null,
+    "back": "4"
+  },
+  {
+    "front": "Represents an entity reference",
+    "back": "EntityReference"
+  },
+  {
+    "front": null,
+    "back": "5"
+  },
+  {
+    "front": "Represents an entity",
+    "back": "Entity"
+  },
+  {
+    "front": null,
+    "back": "6"
+  },
+  {
+    "front": "Represents a processing instruction",
+    "back": "ProcessingInstruction"
+  },
+  {
+    "front": null,
+    "back": "7"
+  },
+  {
+    "front": "Represents a comment",
+    "back": "Comment"
+  },
+  {
+    "front": null,
+    "back": "8"
+  },
+  {
+    "front": "Represents the entire document (the root-node of the DOM tree)",
+    "back": "Document"
+  },
+  {
+    "front": null,
+    "back": "9"
+  },
+  {
+    "front": "Provides an interface to the entities defined for the document",
+    "back": "DocumentType"
+  },
+  {
+    "front": null,
+    "back": "10"
+  },
+  {
+    "front": "Represents a 'lightweight' Document object, which can hold a portion of a document",
+    "back": "DocumentFragment"
+  },
+  {
+    "front": null,
+    "back": "11"
+  },
+  {
+    "front": "Represents a notation declared in the DTD",
+    "back": "Notation"
+  },
+  {
+    "front": null,
+    "back": "12"
+  }
+]

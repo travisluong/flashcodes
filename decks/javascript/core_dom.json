@@ -1,0 +1,242 @@
+[
+  {
+    "front": "Returns the number of nodes in the collection",
+    "back": "length"
+  },
+  {
+    "front": "Returns the node at the specified index in a node list",
+    "back": "item()"
+  },
+  {
+    "front": "Returns the number of nodes in the collection",
+    "back": "length"
+  },
+  {
+    "front": "Returns the specified node (by name)",
+    "back": "getNamedItem()"
+  },
+  {
+    "front": "Returns the node at the specified index in the namedNodeMap",
+    "back": "item()"
+  },
+  {
+    "front": "Removes the specified node (by name)",
+    "back": "removeNamedItem()"
+  },
+  {
+    "front": "Sets the specified node (by name)",
+    "back": "setNamedItem()"
+  },
+  {
+    "front": "Returns the specified node (by name and namespace)",
+    "back": "getNamedItemNS()"
+  },
+  {
+    "front": "Removes the specified node (by name and namespace)",
+    "back": "removeNamedItemNS()"
+  },
+  {
+    "front": "Sets the specified node (by name and namespace)",
+    "back": "setNamedItemNS()"
+  },
+  {
+    "front": "Returns the Document Type Declaration associated with the document",
+    "back": "doctype"
+  },
+  {
+    "front": "Returns the Document Element of the document (the HTML element)",
+    "back": "documentElement"
+  },
+  {
+    "front": "Sets or returns the location of the document",
+    "back": "documentURI"
+  },
+  {
+    "front": "Returns the DOMImplementation object that handles this document",
+    "back": "implementation"
+  },
+  {
+    "front": "Returns the encoding, character set, used for the document",
+    "back": "inputEncoding"
+  },
+  {
+    "front": "Returns the XML encoding of the XML document",
+    "back": "xmlEncoding"
+  },
+  {
+    "front": "Sets or returns the XML version of the XML document",
+    "back": "xmlVersion"
+  },
+  {
+    "front": "Returns the configuration used when normalizeDocument() is invoked",
+    "back": "domConfig"
+  },
+  {
+    "front": "Creates an attribute node",
+    "back": "createAttribute()"
+  },
+  {
+    "front": "Creates a CDATA node with the specified text. For XML DOM only",
+    "back": "createCDATASection()"
+  },
+  {
+    "front": "Creates a Comment node with the specified text",
+    "back": "createComment()"
+  },
+  {
+    "front": "Creates an empty DocumentFragment node",
+    "back": "createDocumentFragment()"
+  },
+  {
+    "front": "Creates an Element node",
+    "back": "createElement()"
+  },
+  {
+    "front": "Creates an EntityReference node. For XML DOM only",
+    "back": "createEntityReference()"
+  },
+  {
+    "front": "Creates a Text node",
+    "back": "createTextNode()"
+  },
+  {
+    "front": "Returns the element that has the ID attribute with the specified value",
+    "back": "getElementById()"
+  },
+  {
+    "front": "Returns a NodeList containing all elements with the specified tagname",
+    "back": "getElementsByTagName()"
+  },
+  {
+    "front": "Returns a list of elements with a given name in the (X)HTML document.",
+    "back": "getElementsByName()"
+  },
+  {
+    "front": "Returns a NodeList containing all elements that match the specified CSS selector",
+    "back": "querySelectorAll()"
+  },
+  {
+    "front": "Returns the first element matching the specified CSS selector",
+    "back": "querySelector()"
+  },
+  {
+    "front": "Returns a NodeList containing all elements with the specified namespaceURI and tagname",
+    "back": "getElementsByTagNameNS()"
+  },
+  {
+    "front": "Imports a node from another document",
+    "back": "importNode()"
+  },
+  {
+    "front": "Adopts a node from another document to this document. Returns the adopted node",
+    "back": "adoptNode(node)"
+  },
+  {
+    "front": "Creates an attribute with the specified name and namspaceURI",
+    "back": "createAttributeNS(URI,name)"
+  },
+  {
+    "front": "Creates an element with the specified namespace",
+    "back": "createElementNS()"
+  },
+  {
+    "front": "Creates an EntityReference node. For XML DOM only",
+    "back": "createProcessingInstruction()"
+  },
+  {
+    "front": "Removes empty Text nodes, and joins adjacent nodes",
+    "back": "normalizeDocument()"
+  },
+  {
+    "front": "Returns the tag name of the element",
+    "back": "tagName"
+  },
+  {
+    "front": "Returns the type information of the element.",
+    "back": "schemaTypeInfo"
+  },
+  {
+    "front": "Returns the specified attribute value",
+    "back": "getAttribute()"
+  },
+  {
+    "front": "Returns the specified attribute value, with the specified namespace. For XML DOM only",
+    "back": "getAttributeNS()"
+  },
+  {
+    "front": "Returns the specified attribute node",
+    "back": "getAttributeNode()"
+  },
+  {
+    "front": "Returns the specified attribute node, with the specified namespace. For XML DOM only",
+    "back": "getAttributeNodeNS()"
+  },
+  {
+    "front": "Returns a collection of all child elements with the specified tagname",
+    "back": "getElementsByTagName()"
+  },
+  {
+    "front": "Returns a collection of all child elements with the specified tagname and namespace. For XML DOM only",
+    "back": "getElementsByTagNameNS()"
+  },
+  {
+    "front": "Returns true if the element has the specified attribute, otherwise it returns false",
+    "back": "hasAttribute()"
+  },
+  {
+    "front": "Returns true if the element has the specified attribute, with the specified namespace, otherwise it returns false. For XML DOM only",
+    "back": "hasAttributeNS()"
+  },
+  {
+    "front": "Removes the specified attribute",
+    "back": "removeAttribute()"
+  },
+  {
+    "front": "Removes the attribute with the specified name and namespace. For XML DOM only",
+    "back": "removeAttributeNS()"
+  },
+  {
+    "front": "Removes the specified attribute node, and returns the removed node",
+    "back": "removeAttributeNode()"
+  },
+  {
+    "front": "Sets or changes the specified attribute, to the specified value",
+    "back": "setAttribute()"
+  },
+  {
+    "front": "Sets or changes the specified attribute, with the specified namespace, to the specified value. For XML DOM only",
+    "back": "setAttributeNS()"
+  },
+  {
+    "front": "Sets or changes the specified attribute node",
+    "back": "setAttributeNode()"
+  },
+  {
+    "front": "Sets or changes the specified attribute node",
+    "back": "setAttributeNodeNS()"
+  },
+  {
+    "front": "Returns ",
+    "back": "isId"
+  },
+  {
+    "front": "Returns the name of the attribute",
+    "back": "name"
+  },
+  {
+    "front": "Returns the element this attribute belongs to",
+    "back": "ownerElement"
+  },
+  {
+    "front": "Returns ",
+    "back": "specified"
+  },
+  {
+    "front": "Sets or returns the value of the attribute",
+    "back": "value"
+  },
+  {
+    "front": "Returns the type information of the attribute",
+    "back": "schemaTypeInfo"
+  }
+]

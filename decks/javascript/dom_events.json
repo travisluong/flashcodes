@@ -1,0 +1,214 @@
+[
+  {
+    "front": "The event occurs when the user clicks on an element",
+    "back": "click"
+  },
+  {
+    "front": "The event occurs when the user double-clicks on an element",
+    "back": "dblclick"
+  },
+  {
+    "front": "The event occurs when a user presses a mouse button over an element",
+    "back": "mousedown"
+  },
+  {
+    "front": "The event occurs when a user moves the mouse pointer over an element",
+    "back": "mousemove"
+  },
+  {
+    "front": "The event occurs when a user mouse over an element",
+    "back": "mouseover"
+  },
+  {
+    "front": "The event occurs when a user moves the mouse pointer out of an element",
+    "back": "mouseout"
+  },
+  {
+    "front": "The event occurs when a user releases a mouse button over an element",
+    "back": "mouseup"
+  },
+  {
+    "front": "The event occurs when the user is pressing a key or holding down a key",
+    "back": "keydown"
+  },
+  {
+    "front": "The event occurs when the user is pressing a key or holding down a key",
+    "back": "keypress"
+  },
+  {
+    "front": "The event occurs when a keyboard key is released",
+    "back": "keyup"
+  },
+  {
+    "front": "The event occurs when a document, frameset, or <object> has been loaded",
+    "back": "load"
+  },
+  {
+    "front": "The event occurs when a document view is resized",
+    "back": "resize"
+  },
+  {
+    "front": "The event occurs when a document is removed from a window or frame (for <body> and <frameset>)",
+    "back": "unload"
+  },
+  {
+    "front": "The event occurs when an image is stopped from loading before completely loaded (for <object>)",
+    "back": "abort"
+  },
+  {
+    "front": "The event occurs when an image does not load properly",
+    "back": "error"
+  },
+  {
+    "front": "The event occurs when a document view is scrolled",
+    "back": "scroll"
+  },
+  {
+    "front": "The event occurs when a form element loses focus",
+    "back": "blur"
+  },
+  {
+    "front": "The event occurs when the content of a form element, the selection, or the checked state have changed (for <input>, <select>, and <textarea>)",
+    "back": "change"
+  },
+  {
+    "front": "The event occurs when an element gets focus (for <label>, <input>, <select>, textarea>, and <button>)",
+    "back": "focus"
+  },
+  {
+    "front": "The event occurs when a user selects some  text (for <input> and <textarea>)",
+    "back": "select"
+  },
+  {
+    "front": "onreset",
+    "back": "reset"
+  },
+  {
+    "front": "The event occurs when a form is submitted",
+    "back": "onsubmit"
+  },
+  {
+    "front": "The current event is in the target phase, i.e. it is being evaluated at the event target (1)",
+    "back": "AT_TARGET"
+  },
+  {
+    "front": "The current event phase is the bubbling phase (2)",
+    "back": "BUBBLING_PHASE"
+  },
+  {
+    "front": "The current event phase is the capture phase (3)",
+    "back": "CAPTURING_PHASE"
+  },
+  {
+    "front": "Returns whether or not an event is a bubbling event",
+    "back": "bubbles"
+  },
+  {
+    "front": "Returns whether or not an event can have its default action prevented",
+    "back": "cancelable"
+  },
+  {
+    "front": "Returns the element whose event listeners triggered the event",
+    "back": "currentTarget"
+  },
+  {
+    "front": "Returns the element that triggered the event",
+    "back": "target"
+  },
+  {
+    "front": "Returns the time (in milliseconds relative to the epoch) at which the event was created",
+    "back": "timeStamp"
+  },
+  {
+    "front": "Returns the name of the event",
+    "back": "type"
+  },
+  {
+    "front": "Returns which phase of the event flow is currently being evaluated",
+    "back": "eventPhase"
+  },
+  {
+    "front": "Specifies the event type, whether or not the event can bubble, whether or not the event's default action can be prevented",
+    "back": "initEvent()"
+  },
+  {
+    "front": "To cancel the event if it is cancelable, meaning that any default action normally taken by the implementation as a result of the event will not occur",
+    "back": "preventDefault()"
+  },
+  {
+    "front": "To prevent further propagation of an event during event flow",
+    "back": "stopPropagation()"
+  },
+  {
+    "front": "Allows the registration of event listeners on the event target (IE8 = attachEvent())",
+    "back": "addEventListener()"
+  },
+  {
+    "front": "Allows to send the event to the subscribed event listeners (IE8 = fireEvent())",
+    "back": "dispatchEvent()"
+  },
+  {
+    "front": "Allows the removal of event listeners on the event target (IE8 = detachEvent())",
+    "back": "removeEventListener()"
+  },
+  {
+    "front": "Called whenever an event occurs of the event type for which the EventListener interface was registered",
+    "back": "handleEvent()"
+  },
+  {
+    "front": "Returns whether or not the ",
+    "back": "altKey"
+  },
+  {
+    "front": "Returns which mouse button was clicked when an event was triggered",
+    "back": "button"
+  },
+  {
+    "front": "Returns the horizontal coordinate of the mouse pointer, relative to the current window, when an event was triggered",
+    "back": "clientX"
+  },
+  {
+    "front": "Returns the vertical coordinate of the mouse pointer, relative to the current window, when an event was triggered",
+    "back": "clientY"
+  },
+  {
+    "front": "Returns whether or not the ",
+    "back": "ctrlKey"
+  },
+  {
+    "front": "Returns whether or not the ",
+    "back": "metaKey"
+  },
+  {
+    "front": "Returns the element related to the element that triggered the event",
+    "back": "relatedTarget"
+  },
+  {
+    "front": "Returns the horizontal coordinate of the mouse pointer, relative to the screen, when an event was triggered",
+    "back": "screenX"
+  },
+  {
+    "front": "Returns the vertical coordinate of the mouse pointer, relative to the screen, when an event was triggered",
+    "back": "screenY"
+  },
+  {
+    "front": "Returns whether or not the ",
+    "back": "shiftKey"
+  },
+  {
+    "front": "Returns the identifier of a key",
+    "back": "keyIdentifier"
+  },
+  {
+    "front": "Returns the location of the key on the advice",
+    "back": "keyLocation"
+  },
+  {
+    "front": "Initializes the value of a MouseEvent object",
+    "back": "initMouseEvent()"
+  },
+  {
+    "front": "Initializes the value of a KeyboardEvent object",
+    "back": "initKeyboardEvent()"
+  }
+]

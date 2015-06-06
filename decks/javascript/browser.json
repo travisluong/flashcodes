@@ -1,0 +1,294 @@
+[
+  {
+    "front": "Returns a Boolean value indicating whether a window has been closed or not",
+    "back": "closed"
+  },
+  {
+    "front": "Sets or returns the default text in the statusbar of a window",
+    "back": "defaultStatus"
+  },
+  {
+    "front": "Returns the Document object for the window",
+    "back": "document"
+  },
+  {
+    "front": "Returns an array of all the frames (including iframes) in the current window",
+    "back": "frames"
+  },
+  {
+    "front": "Returns the History object for the window",
+    "back": "history"
+  },
+  {
+    "front": "Sets or returns the inner height of a window's content area",
+    "back": "innerHeight"
+  },
+  {
+    "front": "Sets or returns the inner width of a window's content area",
+    "back": "innerWidth"
+  },
+  {
+    "front": "Returns the number of frames (including iframes) in a window",
+    "back": "length"
+  },
+  {
+    "front": "Returns the Location object for the window",
+    "back": "location"
+  },
+  {
+    "front": "Sets or returns the name of a window",
+    "back": "name"
+  },
+  {
+    "front": "Returns the Navigator object for the window",
+    "back": "navigator"
+  },
+  {
+    "front": "Returns a reference to the window that created the window",
+    "back": "opener"
+  },
+  {
+    "front": "Sets or returns the outer height of a window, including toolbars/scrollbars",
+    "back": "outerHeight"
+  },
+  {
+    "front": "Sets or returns the outer width of a window, including toolbars/scrollbars",
+    "back": "outerWidth"
+  },
+  {
+    "front": "Returns the pixels the current document has been scrolled (horizontally) from the upper left corner of the window",
+    "back": "pageXOffset"
+  },
+  {
+    "front": "Returns the pixels the current document has been scrolled (vertically) from the upper left corner of the window",
+    "back": "pageYOffset"
+  },
+  {
+    "front": "Returns the parent window of the current window",
+    "back": "parent"
+  },
+  {
+    "front": "Returns the Screen object for the window",
+    "back": "screen"
+  },
+  {
+    "front": "Returns the x coordinate of the window relative to the screen",
+    "back": "screenLeft"
+  },
+  {
+    "front": "Returns the y coordinate of the window relative to the screen",
+    "back": "screenTop"
+  },
+  {
+    "front": "Returns the x coordinate of the window relative to the screen",
+    "back": "screenX"
+  },
+  {
+    "front": "Returns the y coordinate of the window relative to the screen",
+    "back": "screenY"
+  },
+  {
+    "front": "Returns the current window",
+    "back": "self"
+  },
+  {
+    "front": "Sets the text in the statusbar of a window",
+    "back": "status"
+  },
+  {
+    "front": "Returns the topmost browser window",
+    "back": "top"
+  },
+  {
+    "front": "Displays an alert box with a message and an OK button",
+    "back": "alert()"
+  },
+  {
+    "front": "Removes focus from the current window",
+    "back": "blur()"
+  },
+  {
+    "front": "Clears a timer set with setInterval()",
+    "back": "clearInterval()"
+  },
+  {
+    "front": "Clears a timer set with setTimeout()",
+    "back": "clearTimeout()"
+  },
+  {
+    "front": "Closes the current window",
+    "back": "close()"
+  },
+  {
+    "front": "Displays a dialog box with a message and an OK and a Cancel button",
+    "back": "confirm()"
+  },
+  {
+    "front": "Sets focus to the current window",
+    "back": "focus()"
+  },
+  {
+    "front": "Moves a window relative to its current position",
+    "back": "moveBy()"
+  },
+  {
+    "front": "Moves a window to the specified position",
+    "back": "moveTo()"
+  },
+  {
+    "front": "Opens a new browser window",
+    "back": "open()"
+  },
+  {
+    "front": "Prints the content of the current window",
+    "back": "print()"
+  },
+  {
+    "front": "Displays a dialog box that prompts the visitor for input",
+    "back": "prompt()"
+  },
+  {
+    "front": "Resizes the window by the specified pixels",
+    "back": "resizeBy()"
+  },
+  {
+    "front": "Resizes the window to the specified width and height",
+    "back": "resizeTo()"
+  },
+  {
+    "front": "Scrolls the content by the specified number of pixels",
+    "back": "scrollBy()"
+  },
+  {
+    "front": "Scrolls the content to the specified coordinates",
+    "back": "scrollTo()"
+  },
+  {
+    "front": "Calls a function or evaluates an expression at specified intervals (in milliseconds)",
+    "back": "setInterval()"
+  },
+  {
+    "front": "Calls a function or evaluates an expression after a specified number of milliseconds",
+    "back": "setTimeout()"
+  },
+  {
+    "front": "Returns the code name of the browser",
+    "back": "appCodeName"
+  },
+  {
+    "front": "Returns the name of the browser",
+    "back": "appName"
+  },
+  {
+    "front": "Returns the version information of the browser",
+    "back": "appVersion"
+  },
+  {
+    "front": "Determines whether cookies are enabled in the browser",
+    "back": "cookieEnabled"
+  },
+  {
+    "front": "Returns for which platform the browser is compiled",
+    "back": "platform"
+  },
+  {
+    "front": "Returns the user-agent header sent by the browser to the server",
+    "back": "userAgent"
+  },
+  {
+    "front": "Specifies whether or not the browser has Java enabled",
+    "back": "javaEnabled()"
+  },
+  {
+    "front": null,
+    "back": "registerContentHandler()"
+  },
+  {
+    "front": null,
+    "back": "registerProtocolHandler()"
+  },
+  {
+    "front": "Returns the height of the screen (excluding the Windows Taskbar)",
+    "back": "availHeight"
+  },
+  {
+    "front": "Returns the width of the screen (excluding the Windows Taskbar)",
+    "back": "availWidth"
+  },
+  {
+    "front": "Returns the bit depth of the color palette for displaying images",
+    "back": "colorDepth"
+  },
+  {
+    "front": "Returns the total height of the screen",
+    "back": "height"
+  },
+  {
+    "front": "Returns the color resolution (in bits per pixel) of the screen",
+    "back": "pixelDepth"
+  },
+  {
+    "front": "Returns the total width of the screen",
+    "back": "width"
+  },
+  {
+    "front": "Returns the number of URLs in the history list",
+    "back": "length"
+  },
+  {
+    "front": "Loads the previous URL in the history list",
+    "back": "back()"
+  },
+  {
+    "front": "Loads the next URL in the history list",
+    "back": "forward()"
+  },
+  {
+    "front": "Loads a specific URL from the history list",
+    "back": "go()"
+  },
+  {
+    "front": "Returns the anchor portion of a URL",
+    "back": "hash"
+  },
+  {
+    "front": "Returns the hostname and port of a URL",
+    "back": "host"
+  },
+  {
+    "front": "Returns the hostname of a URL",
+    "back": "hostname"
+  },
+  {
+    "front": "Returns the entire URL",
+    "back": "href"
+  },
+  {
+    "front": "Returns the path name of a URL",
+    "back": "pathname"
+  },
+  {
+    "front": "Returns the port number the server uses for a URL",
+    "back": "port"
+  },
+  {
+    "front": "Returns the protocol of a URL",
+    "back": "protocol"
+  },
+  {
+    "front": "Returns the query portion of a URL",
+    "back": "search"
+  },
+  {
+    "front": "Loads a new document",
+    "back": "assign()"
+  },
+  {
+    "front": "Reloads the current document",
+    "back": "reload()"
+  },
+  {
+    "front": "Replaces the current document with a new one",
+    "back": "replace()"
+  }
+]

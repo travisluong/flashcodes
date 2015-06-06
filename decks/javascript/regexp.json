@@ -1,0 +1,138 @@
+[
+  {
+    "front": null,
+    "back": "i"
+  },
+  {
+    "front": null,
+    "back": "g"
+  },
+  {
+    "front": null,
+    "back": "[abc]"
+  },
+  {
+    "front": null,
+    "back": "[^abc]"
+  },
+  {
+    "front": null,
+    "back": "."
+  },
+  {
+    "front": null,
+    "back": "\\w"
+  },
+  {
+    "front": null,
+    "back": "\\W"
+  },
+  {
+    "front": null,
+    "back": "\\d"
+  },
+  {
+    "front": null,
+    "back": "\\D"
+  },
+  {
+    "front": null,
+    "back": "\\s"
+  },
+  {
+    "front": null,
+    "back": "\\S"
+  },
+  {
+    "front": null,
+    "back": "\\b"
+  },
+  {
+    "front": null,
+    "back": "\\B"
+  },
+  {
+    "front": null,
+    "back": "\\n"
+  },
+  {
+    "front": null,
+    "back": "\\xxx"
+  },
+  {
+    "front": null,
+    "back": "\\xdd"
+  },
+  {
+    "front": null,
+    "back": "\\uxxxx"
+  },
+  {
+    "front": null,
+    "back": "n+"
+  },
+  {
+    "front": null,
+    "back": "n*"
+  },
+  {
+    "front": null,
+    "back": "n?"
+  },
+  {
+    "front": null,
+    "back": "n{X}"
+  },
+  {
+    "front": null,
+    "back": "n{X,Y}"
+  },
+  {
+    "front": null,
+    "back": "n{X,}"
+  },
+  {
+    "front": null,
+    "back": "n$"
+  },
+  {
+    "front": null,
+    "back": "^n"
+  },
+  {
+    "front": null,
+    "back": "?=n"
+  },
+  {
+    "front": null,
+    "back": "?!n"
+  },
+  {
+    "front": "Specifies if the ",
+    "back": "global"
+  },
+  {
+    "front": "Specifies if the ",
+    "back": "ignoreCase"
+  },
+  {
+    "front": "The index at which to start the next match",
+    "back": "lastIndex"
+  },
+  {
+    "front": "Specifies if the ",
+    "back": "multiline"
+  },
+  {
+    "front": "The text of the RegExp pattern",
+    "back": "source"
+  },
+  {
+    "front": "Tests for a match in a string. Returns the first match",
+    "back": "exec()"
+  },
+  {
+    "front": "Tests for a match in a string. Returns true or false",
+    "back": "test()"
+  }
+]

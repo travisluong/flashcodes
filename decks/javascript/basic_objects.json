@@ -1,0 +1,426 @@
+[
+  {
+    "front": "Returns the function that created the Array object's prototype",
+    "back": "constructor"
+  },
+  {
+    "front": "Sets or returns the number of elements in an array",
+    "back": "length"
+  },
+  {
+    "front": "Allows you to add properties and methods to an Array object",
+    "back": "prototype"
+  },
+  {
+    "front": "Joins two or more arrays, and returns a copy of the joined arrays",
+    "back": "concat()"
+  },
+  {
+    "front": "Search the array for an element and returns it's position",
+    "back": "indexOf()"
+  },
+  {
+    "front": "Joins all elements of an array into a string",
+    "back": "join()"
+  },
+  {
+    "front": "Search the array for an element, starting at the end, and returns it's position",
+    "back": "lastIndexOf()"
+  },
+  {
+    "front": "Removes the last element of an array, and returns that element",
+    "back": "pop()"
+  },
+  {
+    "front": "Adds new elements to the end of an array, and returns the new length",
+    "back": "push()"
+  },
+  {
+    "front": "Reverses the order of the elements in an array",
+    "back": "reverse()"
+  },
+  {
+    "front": "Removes the first element of an array, and returns that element",
+    "back": "shift()"
+  },
+  {
+    "front": "Selects a part of an array, and returns the new array",
+    "back": "slice()"
+  },
+  {
+    "front": "Sorts the elements of an array",
+    "back": "sort()"
+  },
+  {
+    "front": "Adds/Removes elements from an array",
+    "back": "splice()"
+  },
+  {
+    "front": "Converts an array to a string, and returns the result",
+    "back": "toString()"
+  },
+  {
+    "front": "Adds new elements to the beginning of an array, and returns the new length",
+    "back": "unshift()"
+  },
+  {
+    "front": "Returns the primitive value of an array",
+    "back": "valueOf()"
+  },
+  {
+    "front": "Returns the function that created the Boolean object's prototype",
+    "back": "constructor"
+  },
+  {
+    "front": "Allows you to add properties and methods to a Boolean object",
+    "back": "prototype"
+  },
+  {
+    "front": "Converts a Boolean value to a string, and returns the result",
+    "back": "toString()"
+  },
+  {
+    "front": "Returns the primitive value of a Boolean object",
+    "back": "valueOf()"
+  },
+  {
+    "front": "Returns Euler's number (approx. 2.718)",
+    "back": "E"
+  },
+  {
+    "front": "Returns the natural logarithm of 2 (approx. 0.693)",
+    "back": "LN2"
+  },
+  {
+    "front": "Returns the natural logarithm of 10 (approx. 2.302)",
+    "back": "LN10"
+  },
+  {
+    "front": "Returns the base-2 logarithm of E (approx. 1.442)",
+    "back": "LOG2E"
+  },
+  {
+    "front": "Returns the base-10 logarithm of E (approx. 0.434)",
+    "back": "LOG10E"
+  },
+  {
+    "front": "Returns PI (approx. 3.14)",
+    "back": "PI"
+  },
+  {
+    "front": "Returns the square root of 1/2 (approx. 0.707)",
+    "back": "SQRT1_2"
+  },
+  {
+    "front": "Returns the square root of 2 (approx. 1.414)",
+    "back": "SQRT2"
+  },
+  {
+    "front": "Returns the absolute value of x",
+    "back": "abs(x)"
+  },
+  {
+    "front": "Returns the arccosine of x, in radians",
+    "back": "acos(x)"
+  },
+  {
+    "front": "Returns the arcsine of x, in radians",
+    "back": "asin(x)"
+  },
+  {
+    "front": "Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians",
+    "back": "atan(x)"
+  },
+  {
+    "front": "Returns the arctangent of the quotient of its arguments",
+    "back": "atan2(y,x)"
+  },
+  {
+    "front": "Returns x, rounded upwards to the nearest integer",
+    "back": "ceil(x)"
+  },
+  {
+    "front": "Returns the cosine of x (x is in radians)",
+    "back": "cos(x)"
+  },
+  {
+    "front": "Returns the value of Ex",
+    "back": "exp(x)"
+  },
+  {
+    "front": "Returns x, rounded downwards to the nearest integer",
+    "back": "floor(x)"
+  },
+  {
+    "front": "Returns the natural logarithm (base E) of x",
+    "back": "log(x)"
+  },
+  {
+    "front": "Returns the number with the highest value",
+    "back": "max(x,y,z,...,n)"
+  },
+  {
+    "front": "Returns the number with the lowest value",
+    "back": "min(x,y,z,...,n)"
+  },
+  {
+    "front": "Returns the value of x to the power of y",
+    "back": "pow(x,y)"
+  },
+  {
+    "front": "Returns a random number between 0 and 1",
+    "back": "random()"
+  },
+  {
+    "front": "Rounds x to the nearest integer",
+    "back": "round(x)"
+  },
+  {
+    "front": "Returns the sine of x (x is in radians)",
+    "back": "sin(x)"
+  },
+  {
+    "front": "Returns the square root of x",
+    "back": "sqrt(x)"
+  },
+  {
+    "front": "Returns the tangent of an angle",
+    "back": "tan(x)"
+  },
+  {
+    "front": "Returns the function that created the Number object's prototype",
+    "back": "constructor"
+  },
+  {
+    "front": "Returns the largest number possible in JavaScript",
+    "back": "MAX_VALUE"
+  },
+  {
+    "front": "Returns the smallest number possible in JavaScript",
+    "back": "MIN_VALUE"
+  },
+  {
+    "front": "Represents negative infinity (returned on overflow)",
+    "back": "NEGATIVE_INFINITY"
+  },
+  {
+    "front": "Represents infinity (returned on overflow)",
+    "back": "POSITIVE_INFINITY"
+  },
+  {
+    "front": "Allows you to add properties and methods to an object",
+    "back": "prototype"
+  },
+  {
+    "front": "Converts a number into an exponential notation",
+    "back": "toExponential(x)"
+  },
+  {
+    "front": "Formats a number with x numbers of digits after the decimal point",
+    "back": "toFixed(x)"
+  },
+  {
+    "front": "Formats a number to x length",
+    "back": "toPrecision(x)"
+  },
+  {
+    "front": "Converts a Number object to a string",
+    "back": "toString()"
+  },
+  {
+    "front": "Returns the primitive value of a Number object",
+    "back": "valueOf()"
+  },
+  {
+    "front": "Returns the function that created the String object's prototype",
+    "back": "constructor"
+  },
+  {
+    "front": "Returns the length of a string",
+    "back": "length"
+  },
+  {
+    "front": "Allows you to add properties and methods to an object",
+    "back": "prototype"
+  },
+  {
+    "front": "Returns the character at the specified index",
+    "back": "charAt()"
+  },
+  {
+    "front": "Returns the Unicode of the character at the specified index",
+    "back": "charCodeAt()"
+  },
+  {
+    "front": "Joins two or more strings, and returns a copy of the joined strings",
+    "back": "concat()"
+  },
+  {
+    "front": "Converts Unicode values to characters",
+    "back": "fromCharCode()"
+  },
+  {
+    "front": "Returns the position of the first found occurrence of a specified value in a string",
+    "back": "indexOf()"
+  },
+  {
+    "front": "Returns the position of the last found occurrence of a specified value in a string",
+    "back": "lastIndexOf()"
+  },
+  {
+    "front": "Searches for a match between a regular expression and a string, and returns the matches",
+    "back": "match()"
+  },
+  {
+    "front": "Searches for a match between a substring (or regular expression) and a string, and replaces the matched substring with a new substring",
+    "back": "replace()"
+  },
+  {
+    "front": "Searches for a match between a regular expression and a string, and returns the position of the match",
+    "back": "search()"
+  },
+  {
+    "front": "Extracts a part of a string and returns a new string",
+    "back": "slice()"
+  },
+  {
+    "front": "Splits a string into an array of substrings",
+    "back": "split()"
+  },
+  {
+    "front": "Extracts the characters from a string, beginning at a specified start position, and through the specified number of character",
+    "back": "substr()"
+  },
+  {
+    "front": "Extracts the characters from a string, between two specified indices",
+    "back": "substring()"
+  },
+  {
+    "front": "Converts a string to lowercase letters",
+    "back": "toLowerCase()"
+  },
+  {
+    "front": "Converts a string to uppercase letters",
+    "back": "toUpperCase()"
+  },
+  {
+    "front": "Returns the primitive value of a String object",
+    "back": "valueOf()"
+  },
+  {
+    "front": "Creates an anchor",
+    "back": "anchor()"
+  },
+  {
+    "front": "Displays a string using a big font",
+    "back": "big()"
+  },
+  {
+    "front": "Displays a blinking string",
+    "back": "blink()"
+  },
+  {
+    "front": "Displays a string in bold",
+    "back": "bold()"
+  },
+  {
+    "front": "Displays a string using a fixed-pitch font",
+    "back": "fixed()"
+  },
+  {
+    "front": "Displays a string using a specified color",
+    "back": "fontcolor()"
+  },
+  {
+    "front": "Displays a string using a specified size",
+    "back": "fontsize()"
+  },
+  {
+    "front": "Displays a string in italic",
+    "back": "italics()"
+  },
+  {
+    "front": "Displays a string as a hyperlink",
+    "back": "link()"
+  },
+  {
+    "front": "Displays a string using a small font",
+    "back": "small()"
+  },
+  {
+    "front": "Displays a string with a strikethrough",
+    "back": "strike()"
+  },
+  {
+    "front": "Displays a string as subscript text",
+    "back": "sub()"
+  },
+  {
+    "front": "Displays a string as superscript text",
+    "back": "sup()"
+  },
+  {
+    "front": "A numeric value that represents positive/negative infinity",
+    "back": "Infinity"
+  },
+  {
+    "front": "",
+    "back": "NaN"
+  },
+  {
+    "front": "Indicates that a variable has not been assigned a value",
+    "back": "undefined"
+  },
+  {
+    "front": "Decodes a URI",
+    "back": "decodeURI()"
+  },
+  {
+    "front": "Decodes a URI component",
+    "back": "decodeURIComponent()"
+  },
+  {
+    "front": "Encodes a URI",
+    "back": "encodeURI()"
+  },
+  {
+    "front": "Encodes a URI component",
+    "back": "encodeURIComponent()"
+  },
+  {
+    "front": "Encodes a string",
+    "back": "escape()"
+  },
+  {
+    "front": "Evaluates a string and executes it as if it was script code",
+    "back": "eval()"
+  },
+  {
+    "front": "Determines whether a value is a finite, legal number",
+    "back": "isFinite()"
+  },
+  {
+    "front": "Determines whether a value is an illegal number",
+    "back": "isNaN()"
+  },
+  {
+    "front": "Converts an object's value to a number",
+    "back": "Number()"
+  },
+  {
+    "front": "Parses a string and returns a floating point number",
+    "back": "parseFloat()"
+  },
+  {
+    "front": "Parses a string and returns an integer",
+    "back": "parseInt()"
+  },
+  {
+    "front": "Converts an object's value to a string",
+    "back": "String()"
+  },
+  {
+    "front": "Decodes an encoded string",
+    "back": "unescape()"
+  }
+]

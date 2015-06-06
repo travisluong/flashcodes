@@ -1,0 +1,190 @@
+[
+  {
+    "front": "Returns the function that created the Date object's prototype",
+    "back": "constructor"
+  },
+  {
+    "front": "Allows you to add properties and methods to an object",
+    "back": "prototype"
+  },
+  {
+    "front": "Returns the day of the month (from 1-31)",
+    "back": "getDate()"
+  },
+  {
+    "front": "Returns the day of the week (from 0-6)",
+    "back": "getDay()"
+  },
+  {
+    "front": "Returns the year (four digits)",
+    "back": "getFullYear()"
+  },
+  {
+    "front": "Returns the hour (from 0-23)",
+    "back": "getHours()"
+  },
+  {
+    "front": "Returns the milliseconds (from 0-999)",
+    "back": "getMilliseconds()"
+  },
+  {
+    "front": "Returns the minutes (from 0-59)",
+    "back": "getMinutes()"
+  },
+  {
+    "front": "Returns the month (from 0-11)",
+    "back": "getMonth()"
+  },
+  {
+    "front": "Returns the seconds (from 0-59)",
+    "back": "getSeconds()"
+  },
+  {
+    "front": "Returns the number of milliseconds since midnight Jan 1, 1970",
+    "back": "getTime()"
+  },
+  {
+    "front": "Returns the time difference between GMT and local time, in minutes",
+    "back": "getTimezoneOffset()"
+  },
+  {
+    "front": "Returns the day of the month, according to universal time (from 1-31)",
+    "back": "getUTCDate()"
+  },
+  {
+    "front": "Returns the day of the week, according to universal time (from 0-6)",
+    "back": "getUTCDay()"
+  },
+  {
+    "front": "Returns the year, according to universal time (four digits)",
+    "back": "getUTCFullYear()"
+  },
+  {
+    "front": "Returns the hour, according to universal time (from 0-23)",
+    "back": "getUTCHours()"
+  },
+  {
+    "front": "Returns the milliseconds, according to universal time (from 0-999)",
+    "back": "getUTCMilliseconds()"
+  },
+  {
+    "front": "Returns the minutes, according to universal time (from 0-59)",
+    "back": "getUTCMinutes()"
+  },
+  {
+    "front": "Returns the month, according to universal time (from 0-11)",
+    "back": "getUTCMonth()"
+  },
+  {
+    "front": "Returns the seconds, according to universal time (from 0-59)",
+    "back": "getUTCSeconds()"
+  },
+  {
+    "front": "Parses a date string and returns the number of milliseconds since midnight of January 1, 1970",
+    "back": "parse()"
+  },
+  {
+    "front": "Sets the day of the month of a date object",
+    "back": "setDate()"
+  },
+  {
+    "front": "Sets the year (four digits) of a date object",
+    "back": "setFullYear()"
+  },
+  {
+    "front": "Sets the hour of a date object",
+    "back": "setHours()"
+  },
+  {
+    "front": "Sets the milliseconds of a date object",
+    "back": "setMilliseconds()"
+  },
+  {
+    "front": "Set the minutes of a date object",
+    "back": "setMinutes()"
+  },
+  {
+    "front": "Sets the month of a date object",
+    "back": "setMonth()"
+  },
+  {
+    "front": "Sets the seconds of a date object",
+    "back": "setSeconds()"
+  },
+  {
+    "front": "Sets a date and time by adding or subtracting a specified number of milliseconds to/from midnight January 1, 1970",
+    "back": "setTime()"
+  },
+  {
+    "front": "Sets the day of the month of a date object, according to universal time",
+    "back": "setUTCDate()"
+  },
+  {
+    "front": "Sets the year of a date object, according to universal time (four digits)",
+    "back": "setUTCFullYear()"
+  },
+  {
+    "front": "Sets the hour of a date object, according to universal time",
+    "back": "setUTCHours()"
+  },
+  {
+    "front": "Sets the milliseconds of a date object, according to universal time",
+    "back": "setUTCMilliseconds()"
+  },
+  {
+    "front": "Set the minutes of a date object, according to universal time",
+    "back": "setUTCMinutes()"
+  },
+  {
+    "front": "Sets the month of a date object, according to universal time",
+    "back": "setUTCMonth()"
+  },
+  {
+    "front": "Set the seconds of a date object, according to universal time",
+    "back": "setUTCSeconds()"
+  },
+  {
+    "front": "Converts the date portion of a Date object into a readable string",
+    "back": "toDateString()"
+  },
+  {
+    "front": "Returns the date as a string, using the ISO standard",
+    "back": "toISOString()"
+  },
+  {
+    "front": "Returns the date as a string, formated as a JSON date",
+    "back": "toJSON()"
+  },
+  {
+    "front": "Returns the date portion of a Date object as a string, using locale conventions",
+    "back": "toLocaleDateString()"
+  },
+  {
+    "front": "Returns the time portion of a Date object as a string, using locale conventions",
+    "back": "toLocaleTimeString()"
+  },
+  {
+    "front": "Converts a Date object to a string, using locale conventions",
+    "back": "toLocaleString()"
+  },
+  {
+    "front": "Converts a Date object to a string",
+    "back": "toString()"
+  },
+  {
+    "front": "Converts the time portion of a Date object to a string",
+    "back": "toTimeString()"
+  },
+  {
+    "front": "Converts a Date object to a string, according to universal time",
+    "back": "toUTCString()"
+  },
+  {
+    "front": "Returns the number of milliseconds in a date string since midnight of January 1, 1970, according to universal time",
+    "back": "UTC()"
+  },
+  {
+    "front": "Returns the primitive value of a Date object",
+    "back": "valueOf()"
+  }
+]
