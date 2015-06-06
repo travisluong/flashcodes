@@ -5,34 +5,34 @@
   },
   {
     "name": "jQuery Selectors",
-    "url": "decks/jquery/jquery_selectors.json"
+    "url": "decks/jquery/selectors.json"
   },
   {
     "name": "jQuery Attributes",
-    "url": "decks/jquery/jquery_attributes.json"
+    "url": "decks/jquery/attributes.json"
   },
   {
     "name": "jQuery Manipulation",
-    "url": "decks/jquery/jquery_manipulation.json"
+    "url": "decks/jquery/manipulation.json"
   },
   {
     "name": "jQuery Traversing",
-    "url": "decks/jquery/jquery_traversing.json"
+    "url": "decks/jquery/traversing.json"
   },
   {
     "name": "jQuery Events",
-    "url": "decks/jquery/jquery_events.json"
+    "url": "decks/jquery/events.json"
   },
   {
     "name": "jQuery Effects",
-    "url": "decks/jquery/jquery_effects.json"
+    "url": "decks/jquery/effects.json"
   },
   {
     "name": "jQuery Ajax",
-    "url": "decks/jquery/jquery_ajax.json"
+    "url": "decks/jquery/ajax.json"
   },
   {
     "name": "jQuery Core",
-    "url": "decks/jquery/jquery_core.json"
+    "url": "decks/jquery/core.json"
   }
 ]
