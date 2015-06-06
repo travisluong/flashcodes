@@ -24,6 +24,7 @@ var fc = {
   RIGHT_ARROW_KEY_CODE: 39,
   
   // app state
+  collections: [],
   decks: [],
   currentCards: [],
   currentDeck: null,
@@ -131,8 +132,8 @@ var fc = {
   },
 
   loadDeck: function(e) {
-    var name = $(e.target).data('name');
-    fc.loadDeckByName(name);
+    var url = $(e.target).data('url');
+    fc.loadDeckByUrl(url);
   },
 
   toggleShuffle: function() {
@@ -162,12 +163,18 @@ var fc = {
     });
   },
 
-  fetchCards: function(deck, fn) {
-    $.getJSON(deck.url, function(data) {
+  fetchCards: function(url, fn) {
+    $.getJSON(url, function(data) {
       var cards = data.map(function(obj) {
         return new fc.Card(obj);
       });
       fn(cards);
+    });
+  },
+
+  fetchCollections: function(fn) {
+    $.getJSON("decks.json", function(data) {
+      fn(data);
     });
   },
 
@@ -193,6 +200,24 @@ var fc = {
     });
   },
 
+  loadDeckByUrl: function(url) {
+    fc.cardsDiv.empty();
+    fc.fetchCards(url, function(cards) {
+      if (fc.userOptions.shuffle) {
+        cards = fc.shuffle(cards);
+      }
+      fc.currentCards = cards;
+      fc.loadCard(fc.currentCards[0]);
+      fc.currentCardIndex = 0;
+      fc.correctCount = 0;
+      fc.wrongCount = 0;
+      fc.updateGameInfo();
+      fc.reportCardDiv.empty();
+      fc.gameAreaDiv.show();
+      fc.gameStarted = true;
+    });
+  },
+
   updateGameInfo: function() {
     fc.gameInfoDiv.empty();
     var gameInfoFragment = fc.renderGameInfo(fc.currentCardIndex, 
@@ -200,6 +225,11 @@ var fc = {
         fc.correctCount, 
         fc.wrongCount);
     fc.gameInfoDiv.append(gameInfoFragment);
+  },
+
+  loadCollections: function(collectionsArray) {
+    var html = fc.renderCollections(collectionsArray);
+    fc.decksDiv.append(html);
   },
 
   loadCard: function(card) {
@@ -274,21 +304,24 @@ var fc = {
     return html;
   },
 
-  renderDeck: function(deck) {
-    var html = '<div class="deck">' +
-      '<h2>' + deck.name + '</h2>' +
-      '<button data-name="'+ deck.name + '">Play</button>' +
-      "</div>";
-    return html;  
+  renderCollections: function(collectionsArray) {
+    var html = '';
+    collectionsArray.forEach(function(c) {
+      html += '<h3>' + c.title + '</h3>';
+      html += '<ul id="collections" class="clearfix">';
+      c.decks.forEach(function(d) {
+        html += fc.renderDeck(d);
+      });
+      html += '</ul>';
+    });
+    return html;
   },
 
-  renderDecks: function(deckArray) {
-    var html = '<div class="decks">';
-    deckArray.forEach(function(deck) {
-      html += fc.renderDeck(deck);
-    });
-    html += '</div>';
-    return html;
+  renderDeck: function(deck) {
+    var html = '<li class="deck clearfix">' +
+      '<button data-name="'+ deck.name + '" data-url="' + deck.url + '">' + deck.name + '</button>' +
+      "</li>";
+    return html;  
   },
 
   renderGameInfo: function(cardIndex, cardsLength, correctCount, wrongCount) {
@@ -325,9 +358,10 @@ var fc = {
   // init
   // --------------------------------------------------------------------------------
   init: function() {
-    fc.fetchDecks(function(deckArray) {
-      fc.loadDecks(deckArray);
-      fc.loadDeckByName(fc.decks[0].name);
+    fc.fetchCollections(function(data){
+      fc.collections = data;
+      fc.loadCollections(fc.collections);
+      fc.loadDeckByUrl("decks/tutorial.json")
       fc.bindInit();
       fc.gameStarted = true;
     });

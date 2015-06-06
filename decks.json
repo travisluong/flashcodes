@@ -1,38 +1,89 @@
 [
   {
-    "name": "Tutorial",
-    "url": "decks/tutorial.json"
+    "title": "Tutorials",
+    "decks": [
+      {
+        "name": "Tutorial",
+        "url": "decks/tutorial.json"
+      }
+    ]
   },
   {
-    "name": "jQuery Selectors",
-    "url": "decks/jquery/selectors.json"
+    "title": "JavaScript",
+    "decks": [
+      {
+        "name": "Basic Objects",
+        "url": "decks/javascript/basic_objects.json"
+      },
+      {
+        "name": "Browser",
+        "url": "decks/javascript/browser.json"
+      },
+      {
+        "name": "Core DOM",
+        "url": "decks/javascript/core_dom.json"
+      },
+      {
+        "name": "Date Object",
+        "url": "decks/javascript/date_object.json"
+      },
+      {
+        "name": "DOM Events",
+        "url": "decks/javascript/dom_events.json"
+      },
+      {
+        "name": "Dom Node",
+        "url": "decks/javascript/dom_node.json"
+      },
+      {
+        "name": "Graphics",
+        "url": "decks/javascript/graphics.json"
+      },
+      {
+        "name": "RegExp",
+        "url": "decks/javascript/regexp.json"
+      },
+      {
+        "name": "Resource",
+        "url": "decks/javascript/resource.json"
+      }                                  
+    ]
   },
   {
-    "name": "jQuery Attributes",
-    "url": "decks/jquery/attributes.json"
-  },
-  {
-    "name": "jQuery Manipulation",
-    "url": "decks/jquery/manipulation.json"
-  },
-  {
-    "name": "jQuery Traversing",
-    "url": "decks/jquery/traversing.json"
-  },
-  {
-    "name": "jQuery Events",
-    "url": "decks/jquery/events.json"
-  },
-  {
-    "name": "jQuery Effects",
-    "url": "decks/jquery/effects.json"
-  },
-  {
-    "name": "jQuery Ajax",
-    "url": "decks/jquery/ajax.json"
-  },
-  {
-    "name": "jQuery Core",
-    "url": "decks/jquery/core.json"
+    "title": "jQuery",
+    "decks": [
+      {
+        "name": "Selectors",
+        "url": "decks/jquery/selectors.json"
+      },
+      {
+        "name": "Attributes",
+        "url": "decks/jquery/attributes.json"
+      },
+      {
+        "name": "Manipulation",
+        "url": "decks/jquery/manipulation.json"
+      },
+      {
+        "name": "Traversing",
+        "url": "decks/jquery/traversing.json"
+      },
+      {
+        "name": "Events",
+        "url": "decks/jquery/events.json"
+      },
+      {
+        "name": "Effects",
+        "url": "decks/jquery/effects.json"
+      },
+      {
+        "name": "Ajax",
+        "url": "decks/jquery/ajax.json"
+      },
+      {
+        "name": "Core",
+        "url": "decks/jquery/core.json"
+      }
+    ]
   }
 ]

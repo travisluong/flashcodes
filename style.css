@@ -67,15 +67,16 @@ p {
 }
 
 .deck {
-  background: #FFFAD5;
   color: #105B63;
   margin: 20px auto;
   padding: 10px;
 }
 
 .deck button {
-  margin-top: 10px;
-  padding: 10px;
+  padding: 5px;
+  display: block;
+  width: 100%;
+  margin-bottom: 1px;
 }
 
 .deck button:hover {
@@ -116,6 +117,11 @@ p {
 
 .hidden {
   display: none;
+}
+
+#collections li {
+  margin: 0;
+  padding: 0;
 }
 
 #user-options {
