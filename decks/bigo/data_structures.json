@@ -8,8 +8,8 @@
     "back": "Linked list<br>Average case: Insert O(1), Delete O(1), Search O(n)<br>Worst case: O(1), Delete O(1), Search O(n)"
   },
   {
-    "front": "Linked list<br>Average/worst case insert, delete, and search?",
-    "back": "Linked list<br>Average case: Insert O(1), Delete O(1), Search O(n)<br>Worst case: O(1), Delete O(1), Search O(n)"
+    "front": "Doubly Linked list<br>Average/worst case insert, delete, and search?",
+    "back": "Doubly Linked list<br>Average case: Insert O(1), Delete O(1), Search O(n)<br>Worst case: O(1), Delete O(1), Search O(n)"
   },
   {
     "front": "Hash table<br>Average/worst case insert, delete, and search?",
