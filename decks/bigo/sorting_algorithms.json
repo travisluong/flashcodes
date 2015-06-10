@@ -8,7 +8,7 @@
     "back": "Best O(n²), Average O(n²), Worst O(n²)"
   },
   {
-    "front": "Insert Sort",
+    "front": "Insertion Sort",
     "back": "Best O(n), Average O(n²), Worst O(n²)"
   },
   {
