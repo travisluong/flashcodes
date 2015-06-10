@@ -1,0 +1,22 @@
+[
+  {
+    "front": "Array/stack/queue<br>Average/worst case insert, delete, and search?",
+    "back": "Array/stack/queue<br>Average case: Insert O(1), Delete O(1), Search O(n)<br>Worst case: O(1), Delete O(1), Search O(n)"
+  },
+  {
+    "front": "Linked list<br>Average/worst case insert, delete, and search?",
+    "back": "Linked list<br>Average case: Insert O(1), Delete O(1), Search O(n)<br>Worst case: O(1), Delete O(1), Search O(n)"
+  },
+  {
+    "front": "Linked list<br>Average/worst case insert, delete, and search?",
+    "back": "Linked list<br>Average case: Insert O(1), Delete O(1), Search O(n)<br>Worst case: O(1), Delete O(1), Search O(n)"
+  },
+  {
+    "front": "Hash table<br>Average/worst case insert, delete, and search?",
+    "back": "Hash table<br>Average case: Insert O(1), Delete O(1), Search O(1)<br>Worst case: O(n), Delete O(n), Search O(n)"
+  },
+  {
+    "front": "Binary search tree<br>Average/worst case insert, delete, and search?",
+    "back": "Binary search tree<br>Average case: Insert O(log(n)), Delete O(log(n)), Search O(log(n))<br>Worst case: O(n), Delete O(n), Search O(n)"
+  }
+]

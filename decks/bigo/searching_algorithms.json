@@ -1,0 +1,18 @@
+[
+  {
+    "front": "Sequential search: Data structure and worst case?",
+    "back": "Array and linked list O(n)"
+  },
+  {
+    "front": "Binary search: Data structure and worst case?",
+    "back": "Sorted array and binary search tree O(log(n))"
+  },
+  {
+    "front": "Depth-first search (DFS): Data structure and worst case?",
+    "back": "Graph of |V| vertices and |E| edges O(|V| + |E|)"
+  },
+  {
+    "front": "Breadth-first search (BFS): Data structure and worst case?",
+    "back": "Graph of |V| vertices and |E| edges O(|V| + |E|)"
+  }
+]

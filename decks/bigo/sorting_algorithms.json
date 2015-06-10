@@ -1,0 +1,22 @@
+[
+  {
+    "front": "Bubble Sort",
+    "back": "Best O(n), Average O(n²), Worst O(n²)"
+  },
+  {
+    "front": "Selection Sort",
+    "back": "Best O(n²), Average O(n²), Worst O(n²)"
+  },
+  {
+    "front": "Insert Sort",
+    "back": "Best O(n), Average O(n²), Worst O(n²)"
+  },
+  {
+    "front": "Merge Sort",
+    "back": "Best O(n log(n)), Average O(n log(n)), Worst O(n log(n))"
+  },
+  {
+    "front": "Quick Sort",
+    "back": "Best O(n log(n)), Average O(n log(n)), Worst O(n²)"
+  }
+]

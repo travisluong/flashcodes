@@ -9,6 +9,27 @@
     ]
   },
   {
+    "title": "Big O",
+    "decks": [
+      {
+        "name": "Data structures",
+        "url": "decks/bigo/data_structures.json"
+      },
+      {
+        "name": "Graphs",
+        "url": "decks/bigo/graphs.json"
+      },
+      {
+        "name": "Sorting algorithms",
+        "url": "decks/bigo/sorting_algorithms.json"
+      },
+      {
+        "name": "Searching algorithms",
+        "url": "decks/bigo/searching_algorithms.json"
+      }
+    ]
+  },
+  {
     "title": "JavaScript",
     "decks": [
       {

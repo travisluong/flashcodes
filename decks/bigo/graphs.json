@@ -1,0 +1,10 @@
+[
+  {
+    "front": "Adjacency list<br>Storage size, Add vertex, Add edge, Remove vertex, Remove edge, Query?",
+    "back": "Adjacency list<br>Storage size O(|V| + |E|), Add vertex O(1), Add edge O(1), Remove vertex O(|V| + |E|), Remove edge O(|E|), Query O(|V|)"
+  },
+  {
+    "front": "Adjacency matrix<br>Storage size, Add vertex, Add edge, Remove vertex, Remove edge, Query?",
+    "back": "Adjacency matrix<br>Storage size O(|V|²), Add vertex O(|V|²), Add edge O(1), Remove vertex O(|V|²), Remove edge O(1), Query O(1)"
+  }
+]
