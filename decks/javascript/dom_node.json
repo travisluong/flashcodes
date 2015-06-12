@@ -144,7 +144,7 @@
     "back": "Element"
   },
   {
-    "front": null,
+    "front": "Element",
     "back": "1"
   },
   {
@@ -152,7 +152,7 @@
     "back": "Attr"
   },
   {
-    "front": null,
+    "front": "Attr",
     "back": "2"
   },
   {
@@ -160,7 +160,7 @@
     "back": "Text"
   },
   {
-    "front": null,
+    "front": "Text",
     "back": "3"
   },
   {
@@ -168,7 +168,7 @@
     "back": "CDATASection"
   },
   {
-    "front": null,
+    "front": "CDATASection",
     "back": "4"
   },
   {
@@ -176,7 +176,7 @@
     "back": "EntityReference"
   },
   {
-    "front": null,
+    "front": "EntityReference",
     "back": "5"
   },
   {
@@ -184,7 +184,7 @@
     "back": "Entity"
   },
   {
-    "front": null,
+    "front": "Entity",
     "back": "6"
   },
   {
@@ -192,7 +192,7 @@
     "back": "ProcessingInstruction"
   },
   {
-    "front": null,
+    "front": "ProcessingInstruction",
     "back": "7"
   },
   {
@@ -200,7 +200,7 @@
     "back": "Comment"
   },
   {
-    "front": null,
+    "front": "Comment",
     "back": "8"
   },
   {
@@ -208,7 +208,7 @@
     "back": "Document"
   },
   {
-    "front": null,
+    "front": "Document",
     "back": "9"
   },
   {
@@ -216,7 +216,7 @@
     "back": "DocumentType"
   },
   {
-    "front": null,
+    "front": "DocumentType",
     "back": "10"
   },
   {
@@ -224,7 +224,7 @@
     "back": "DocumentFragment"
   },
   {
-    "front": null,
+    "front": "DocumentFragment",
     "back": "11"
   },
   {
@@ -232,7 +232,7 @@
     "back": "Notation"
   },
   {
-    "front": null,
+    "front": "Notation",
     "back": "12"
   }
 ]
